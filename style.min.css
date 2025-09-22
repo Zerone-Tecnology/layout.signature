@@ -1,0 +1,199 @@
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("src/fonts/NeueMontreal/ppneuemontreal-book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("src/fonts/NeueMontreal/ppneuemontreal-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("src/fonts/NeueMontreal/ppneuemontreal-medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+::-webkit-scrollbar-track {
+  background: #2E2626; /* background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D9D9; /* draggable button */
+}
+
+/* Firefox */
+* {
+  scrollbar-color: #D9D9D9 #2E2626; /* thumb | track */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: "NeueMontreal";
+}
+
+.logo {
+  font-size: 37px;
+}
+.logo img {
+  height: 27px;
+  object-fit: contain;
+}
+
+a {
+  color: #0289CB;
+}
+
+.welcome-page {
+  background-image: url("src/images/welcome-background.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 44px 62px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: #fff;
+  font-family: "NeueMontreal";
+}
+.welcome-page main > div:first-child {
+  flex: 1;
+  padding-top: 150px;
+}
+.welcome-page h1 {
+  font-size: 98px;
+  max-width: 1056px;
+}
+.welcome-page .logo {
+  font-size: 37px;
+}
+.welcome-page .logo img {
+  width: 74px;
+  height: 27px;
+  object-fit: contain;
+}
+.welcome-page ul {
+  gap: 44px;
+}
+.welcome-page ul li {
+  list-style-type: none;
+  font-size: 23px;
+}
+.welcome-page button {
+  width: 363px;
+  height: 67px;
+  border-radius: 31px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(9.3px);
+  -webkit-backdrop-filter: blur(9.3px);
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fff;
+  font-size: 35px;
+}
+
+.form {
+  padding-top: 101px;
+  padding-bottom: 25px;
+  background-color: #fdfdfd;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "NeueMontreal";
+  font-size: 15px;
+}
+.form form {
+  background-color: #fff;
+  width: 100%;
+  max-width: 562px;
+  box-shadow: 0 0 25.5px rgba(0, 0, 0, 0.2);
+  padding: 55px 49px;
+  border-radius: 24px;
+  color: #000000;
+  margin: 49px;
+}
+.form form .logo img {
+  width: 102px;
+  height: 37px;
+}
+.form form b {
+  font-size: 27px;
+}
+.form form label {
+  color: #585858;
+}
+.form form label.cursor-pointer:hover {
+  cursor: pointer;
+}
+.form form input {
+  background-color: #F0F0F0;
+  border: 1px solid #585858;
+  height: 48px;
+  border-radius: 9px;
+}
+.form form input.light-bg {
+  background: none;
+}
+.form form button {
+  background-color: #454545;
+  width: 100%;
+  font-size: 17px;
+  color: #d1d1d1;
+  height: 48px;
+  border-radius: 9px;
+}
+.form form .double-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+.form form .double-input div {
+  width: 100%;
+}
+.form form .double-input.width-100-70 div:nth-of-type(2) {
+  width: 70%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.form form .double-input.width-100-70 div:nth-of-type(2) label {
+  height: 48px;
+  width: 100%;
+  border: 1px solid #088CFA;
+  border-radius: 9px;
+  color: #088CFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.form form .input-group input {
+  border-right: none;
+}
+.form form .input-group span {
+  background-color: #F0F0F0;
+  border: 1px solid #585858;
+  border-radius: 9px;
+}
+.form form .back-link img {
+  height: 19px;
+}
+.form form .back-link a {
+  text-decoration: none;
+  color: #000000;
+}
+.form main > div:first-child {
+  flex: 1;
+}
+.form footer {
+  font-size: 12px;
+}/*# sourceMappingURL=style.min.css.map */

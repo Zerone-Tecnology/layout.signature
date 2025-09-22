@@ -1,0 +1,241 @@
+$white: #fff;
+$black: #000000;
+$background-white: #fdfdfd;
+$links-color: #0289CB;
+
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('src/fonts/NeueMontreal/ppneuemontreal-book.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('src/fonts/NeueMontreal/ppneuemontreal-bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('src/fonts/NeueMontreal/ppneuemontreal-medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+
+::-webkit-scrollbar-track {
+  background: #2E2626; /* background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D9D9; /* draggable button */
+}
+
+/* Firefox */
+* {
+  scrollbar-color: #D9D9D9 #2E2626; /* thumb | track */
+}
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: 'NeueMontreal';
+}
+
+.logo {
+    font-size: 37px;
+    img {
+        height: 27px;
+        object-fit: contain;
+    }
+}
+
+a {
+    color: $links-color
+}
+
+.welcome-page {
+    background-image: url('src/images/welcome-background.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 44px 62px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: $white;
+    font-family: 'NeueMontreal';
+
+    main > div:first-child {
+        flex: 1;
+        padding-top: 150px;
+    }
+
+    h1 {
+        font-size: 98px;
+        max-width: 1056px;
+    }
+
+    .logo {
+        font-size: 37px;
+        img {
+            width: 74px;
+            height: 27px;
+            object-fit: contain;
+        }
+    }
+
+    ul {
+        gap: 44px;
+        li {
+            list-style-type: none;
+            font-size: 23px;
+        }
+    }
+
+    button {
+        width: 363px;
+        height: 67px;
+        border-radius: 31px;
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(9.3px);
+        -webkit-backdrop-filter: blur(9.3px);
+        color: #fff;
+        cursor: pointer;
+        border: 1px solid $white;
+        font-size: 35px;
+    }
+}
+
+.form{
+    padding-top: 101px;
+    padding-bottom: 25px;
+    background-color: $background-white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'NeueMontreal';
+    font-size: 15px;
+
+    form{
+        background-color: $white;
+        width: 100%;
+        max-width: 562px;
+        box-shadow: 0 0 25.5px rgba(0, 0, 0, 0.2);
+        padding: 55px 49px;
+        border-radius: 24px;
+        color: $black;
+        margin: 49px;
+
+        .logo img {
+            width: 102px;
+            height: 37px;
+        }
+        
+        b {
+            font-size: 27px;
+        }
+
+        label {
+            color: #585858;
+        }
+
+        label.cursor-pointer:hover{
+            cursor: pointer;
+        }
+
+        input {
+            background-color: #F0F0F0;
+            border: 1px solid #585858;
+            height: 48px;
+            border-radius: 9px;
+
+            &.light-bg {
+                background: none;
+            }
+        }
+
+        button {
+            background-color: #454545;
+            width: 100%;
+            font-size: 17px;
+            color: #d1d1d1;
+            height: 48px;
+            border-radius: 9px;
+        }
+        
+        .double-input {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+
+            div {
+                width: 100%;
+            }
+
+            &.width-100-70 {
+                div:nth-of-type(2) {
+                    width: 70%;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+
+                    label {
+                        height: 48px;
+                        width: 100%;
+                        border: 1px solid #088CFA;
+                        border-radius: 9px;
+                        color: #088CFA;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        
+        .input-group {
+            input {
+                border-right: none;
+            }
+            span {
+                background-color: #F0F0F0;
+                border: 1px solid #585858;
+                border-radius: 9px;
+            }
+        }
+
+        .back-link {
+            img {
+                height: 19px;
+            }
+            a {
+                text-decoration: none;
+                color: $black;
+            }
+        }
+        
+        
+    }
+
+    main > div:first-child {
+        flex: 1;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}

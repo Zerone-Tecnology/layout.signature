@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="form">
+        <header class="d-flex justify-content-center">
+            <div class="logo d-flex align-items-baseline">
+                <img src="../src/images/logo-black.svg" alt="logo">
+                <span class="ms-2">Signature</span>
+            </div>
+        </header>
+        <main>
+            <div class="d-flex justify-content-center align-items-center">
+                <form>
+                    <div class="mb-5 logo d-flex align-items-baseline justify-content-center">
+                        <img src="../src/images/logo-black.svg" alt="logo">
+                    </div>
+
+                    <div class="mb-3">
+                        <b>Создайте учётную запись</b>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Адрес корпоративной электронной почты</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3 double-input">
+                        <div>
+                        <label for="firstName" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="firstName">
+                        </div>
+                        <div>
+                        <label for="lastName" class="form-label">Фамилия</label>
+                        <input type="text" class="form-control" id="lastName">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Телефон</label>
+                        <input type="tel" class="form-control" id="phone">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Создайте пароль</label>
+                        <div class="input-group mb-3">
+                        <input id="password" type="password" class="form-control" aria-describedby="togglePassword" aria-label="Password">
+                        <span class="input-group-text" role="button" id="togglePassword">
+                            <img src="../src/images/eye-icon.svg" alt="show/hide password">
+                        </span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn mt-5">Продолжить</button>
+
+                    <div class="d-flex justify-content-center mt-4">
+                        <span>У вас уже есть учетная запись?</span><a href="#" class="ms-2">Войти</a>
+                    </div>
+                </form>
+
+            </div>
+            <footer class="d-flex align-items-center flex-column">
+                <div>
+                    <a href="#">Условия пользования</a>
+                    <a href="#" class="ms-3">Политика конфидициальности</a>
+                </div>
+                <div>©2025 Все права защищены</div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
