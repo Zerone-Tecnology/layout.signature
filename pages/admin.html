@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header class="d-flex justify-content-between">
+        <div class="d-flex">
+            <div class="logo d-flex align-items-center">
+                <img src="../src/images/logo-black.svg" alt="logo">
+                <span class="ms-1">Signature</span>
+            </div>
+            <div class="d-flex flex-column justify-content-center lh-sm ms-4">
+                <div class="fs-16px c979797">Добро пожаловать!</div>
+                <div class="fw-medium fs-24px">Аман Турагалиев</div>
+            </div>
+        </div>
+        <nav class="d-flex">
+            <ul class="menu d-flex list-group list-group-horizontal align-items-center gap-4">
+                <li class="d-flex">
+                    <button class="btn btn-dark fs-15px">Написать поддержке</button>
+                </li>
+                <li class="d-flex" id="user-profile-picture">
+                    <img src="../src/images/icons/user.svg" alt="user">
+                    <!-- if user online -->
+                        <img src="../src/images/icons/online-icon.svg" alt="online" id="online-icon">
+                </li>
+                <li>
+                    <div>
+                        <span><img src="../src/images/icons/settings-icon.svg" alt="settings"></span>
+                        <span class="fw-medium fs-20px">Турагалиев А.Е.</span>
+                    </div>
+                    <div class="fs-16px c979797">Юрист ҚМ</div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="d-flex main flex-grow-1">
+        <aside class="d-flex flex-column">
+            <div class="card d-flex flex-row justify-content-center align-items-center">
+                <div class="d-flex">
+                    <div class="me-2">
+                        <img src="../src/images/icons/check-icon.svg" alt="">
+                    </div>
+                    <div>
+                        <div class="fw-medium">ТОО "Қамқор Менеджмент"</div>
+                        <div class="fs-14px fw-medium blue-color-font">ЭЦП компании подтвержден   </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary d-flex align-items-center justify-content-center">
+                    <div><img src="../src/images/icons/update-icon.svg" alt="update"></div>
+                    <div><span class="ms-2 fs-15px">ОБНОВИТЬ ДОКУМЕНТЫ</span></div>
+                </button>
+            </div>
+            <nav>
+                <ul>
+                    <a href="#">
+                        <li class="active">
+                            <div><img src="../src/images/icons/home-nav-icon.svg" alt="home"></div>
+                            <div><span>Все документы</span></div>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <div><img src="../src/images/icons/send-nav-icon.svg" alt="home"></div>
+                            <div><span>Отправленные</span></div>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <div><img src="../src/images/icons/check-nav-icon.svg" alt="home"></div>
+                            <div><span>Подписанные</span></div>
+                        </li>
+                    </a>
+                    <li>
+                        <div><img src="../src/images/icons/clock-nav-icon.svg" alt="home"></div>
+                        <div><span>Архивирован</span></div>
+                    </li>
+                    <li>
+                        <div><img src="../src/images/icons/settings-nav-icon.svg" alt="home"></div>
+                        <div><span>Настройки</span></div>
+                    </li>
+                    <li>
+                        <div><img src="../src/images/icons/panel-nav-icon.svg" alt="home"></div>
+                        <div><span>Панель управления</span></div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="d-flex flex-column mt-auto">
+                <button class="btn btn-light mb-2">
+                    <img src="../src/images/icons/world-icon-gray.svg" alt="language">
+                    <span class="ps-3">РУС</span>
+                </button>
+                <button class="btn btn-dark">
+                    <img src="../src/images/icons/exit-icon.svg" alt="">
+                    <span class="ps-3">Выйти</span>
+                </button>
+            </div>
+        </aside>
+        <main class="flex-column ">
+            <div class="cards d-flex gap-3 flex-wrap">
+                <div class="card col card-contracts">
+                    <div>
+                        <img src="../src/images/icons/contracts-icon.svg" alt="contracts">
+                    </div>
+                    <div>
+                        <div>10</div>
+                        <div>Договоры</div>
+                    </div>
+                </div>
+                <div class="card col card-agreements">
+                    <div>
+                        <img src="../src/images/icons/agreements-icon.svg" alt="agreements">
+                    </div>
+                    <div>
+                        <div>15</div>
+                        <div>Дополнительное соглашение</div>
+                    </div>
+                </div>
+                <div class="card col card-terminations">
+                    <div>
+                        <img src="../src/images/icons/terminations-icon.svg" alt="terminations">
+                    </div>
+                    <div>
+                        <div>4</div>
+                        <div>Соглашение о расторжении</div>
+                    </div>
+                </div>
+                <div class="card col card-notifications">
+                    <div>
+                        <img src="../src/images/icons/notifications-icon.svg" alt="notifications">
+                    </div>
+                    <div>
+                        <div>12</div>
+                        <div>Уведомления</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-grow-1 m-0 contracts  overflow-auto">
+                <div class="sorting d-flex contracts-table-wrapper">
+                    <div class="contracts-table w-100">
+
+                        <div class="contracts-table-header">
+                            <div class="filters d-flex">
+                                <div class="input-group">
+                                    <img src="../src/images/icons/search-icon.svg" alt="search">
+                                    <input 
+                                        type="text" 
+                                        id="contract-search" 
+                                        name="contract-search" 
+                                        class="form-control" 
+                                        placeholder="Поиск договоров">
+
+                                </div>
+                                <div class="input-group ms-3">
+                                    <img src="../src/images/icons/filter-icon.svg" alt="filter">
+                                    <select class="form-select" name="filter">
+                                        <option value="" disabled selected hidden>Фильтр</option>
+                                        <option value="apple">one</option>
+                                        <option value="banana">two</option>
+                                        <option value="cherry">three</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="contracts-table-row mt-3">
+                                <div><input type="checkbox" class="checkbox"></div>
+                                <div>
+                                    <select class="form-select" name="filter">
+                                        <option value="" disabled="" selected="" hidden="">ТИП</option>
+                                        <option value="apple">one</option>
+                                        <option value="banana">two</option>
+                                        <option value="cherry">three</option>
+                                    </select>
+                                </div>
+                                <div>№</div>
+                                <div>
+                                    <select class="form-select" name="filter">
+                                        <option value="" disabled="" selected="" hidden="">ИЗДАН</option>
+                                        <option value="apple">one</option>
+                                        <option value="banana">two</option>
+                                        <option value="cherry">three</option>
+                                    </select>
+                                </div>
+                                <div>Дата Под.</div>
+                                <div>
+                                    <select class="form-select" name="filter">
+                                        <option value="" disabled="" selected="" hidden="">КОНТРАГЕНТ</option>
+                                        <option value="apple">one</option>
+                                        <option value="banana">two</option>
+                                        <option value="cherry">three</option>
+                                    </select>
+                                </div>
+                                <div>Описание</div>
+                                <div>
+                                    <select class="form-select" name="filter">
+                                        <option value="" disabled="" selected="" hidden="">СОГЛАСОВАНИЕ</option>
+                                        <option value="apple">one</option>
+                                        <option value="banana">two</option>
+                                        <option value="cherry">three</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select class="form-select" name="filter">
+                                        <option value="" disabled="" selected="" hidden="">ИЗМЕНЕН</option>
+                                        <option value="apple">one</option>
+                                        <option value="banana">two</option>
+                                        <option value="cherry">three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="contracts-table-body">
+                            <div class="contracts-table-row">
+                                <div><input type="checkbox"></div>
+                                <div>ЭДО</div>
+                                <div>00000001</div>
+                                <div>21.08.2025<br>15:31</div>
+                                <div>30.08.2025</div>
+                                <div>
+                                <div>Марганов А.А.</div>
+                                <div>ТОО "Тимирлан жанулу"</div>
+                                </div>
+                                <div>Договор ... №7</div>
+                                <div><div class="status execution">Исполнение</div></div>
+                                <div>21.08.2025<br>15:31</div>
+                            </div>
+                            <div class="contracts-table-row">
+                                <div><input type="checkbox"></div>
+                                <div>ЭДО</div>
+                                <div>00000001</div>
+                                <div>21.08.2025<br>15:31</div>
+                                <div>30.08.2025</div>
+                                <div>
+                                <div>Марганов А.А.</div>
+                                <div>ТОО "Тимирлан жанулу"</div>
+                                </div>
+                                <div>Договор ... №7</div>
+                                <div><div class="status execution">Исполнение</div></div>
+                                <div>21.08.2025<br>15:31</div>
+                            </div>
+                            <div class="contracts-table-row">
+                                <div><input type="checkbox"></div>
+                                <div>ЭДО</div>
+                                <div>00000001</div>
+                                <div>21.08.2025<br>15:31</div>
+                                <div>30.08.2025</div>
+                                <div>
+                                <div>Марганов А.А.</div>
+                                <div>ТОО "Тимирлан жанулу"</div>
+                                </div>
+                                <div>Договор ... №7</div>
+                                <div><div class="status execution">Исполнение</div></div>
+                                <div>21.08.2025<br>15:31</div>
+                            </div>
+                            <div class="contracts-table-row">
+                                <div><input type="checkbox"></div>
+                                <div>ЭДО</div>
+                                <div>00000001</div>
+                                <div>21.08.2025<br>15:31</div>
+                                <div>30.08.2025</div>
+                                <div>
+                                <div>Марганов А.А.</div>
+                                <div>ТОО "Тимирлан жанулу"</div>
+                                </div>
+                                <div>Договор ... №7</div>
+                                <div><div class="status execution">Исполнение</div></div>
+                                <div>21.08.2025<br>15:31</div>
+                            </div>
+                            <div class="contracts-table-row">
+                                <div><input type="checkbox"></div>
+                                <div>ЭДО</div>
+                                <div>00000001</div>
+                                <div>21.08.2025<br>15:31</div>
+                                <div>30.08.2025</div>
+                                <div>
+                                <div>Марганов А.А.</div>
+                                <div>ТОО "Тимирлан жанулу"</div>
+                                </div>
+                                <div>Договор ... №7</div>
+                                <div><div class="status execution">Исполнение</div></div>
+                                <div>21.08.2025<br>15:31</div>
+                            </div>
+                            <div class="contracts-table-row">
+                                <div><input type="checkbox"></div>
+                                <div>ЭДО</div>
+                                <div>00000001</div>
+                                <div>21.08.2025<br>15:31</div>
+                                <div>30.08.2025</div>
+                                <div>
+                                <div>Марганов А.А.</div>
+                                <div>ТОО "Тимирлан жанулу"</div>
+                                </div>
+                                <div>Договор ... №7</div>
+                                <div><div class="status execution">Исполнение</div></div>
+                                <div>21.08.2025<br>15:31</div>
+                            </div>
+                            <div class="contracts-table-row">
+                                <div><input type="checkbox"></div>
+                                <div>ЭДО</div>
+                                <div>00000001</div>
+                                <div>21.08.2025<br>15:31</div>
+                                <div>30.08.2025</div>
+                                <div>
+                                <div>Марганов А.А.</div>
+                                <div>ТОО "Тимирлан жанулу"</div>
+                                </div>
+                                <div>Договор ... №7</div>
+                                <div><div class="status execution">Исполнение</div></div>
+                                <div>21.08.2025<br>15:31</div>
+                            </div>
+                            <div class="contracts-table-row">
+                                <div><input type="checkbox"></div>
+                                <div>ЭДО</div>
+                                <div>00000001</div>
+                                <div>21.08.2025<br>15:31</div>
+                                <div>30.08.2025</div>
+                                <div>
+                                <div>Марганов А.А.</div>
+                                <div>ТОО "Тимирлан жанулу"</div>
+                                </div>
+                                <div>Договор ... №7</div>
+                                <div><div class="status execution">Исполнение</div></div>
+                                <div>21.08.2025<br>15:31</div>
+                            </div>
+                            <div class="contracts-table-row">
+                                <div><input type="checkbox"></div>
+                                <div>ЭДО</div>
+                                <div>00000001</div>
+                                <div>21.08.2025<br>15:31</div>
+                                <div>30.08.2025</div>
+                                <div>
+                                <div>Марганов А.А.</div>
+                                <div>ТОО "Тимирлан жанулу"</div>
+                                </div>
+                                <div>Договор ... №7</div>
+                                <div><div class="status execution">Исполнение</div></div>
+                                <div>21.08.2025<br>15:31</div>
+                            </div>
+                            <div class="contracts-table-row">
+                                <div><input type="checkbox"></div>
+                                <div>ЭДО</div>
+                                <div>00000001</div>
+                                <div>21.08.2025<br>15:31</div>
+                                <div>30.08.2025</div>
+                                <div>
+                                <div>Марганов А.А.</div>
+                                <div>ТОО "Тимирлан жанулу"</div>
+                                </div>
+                                <div>Договор ... №7</div>
+                                <div><div class="status execution">Исполнение</div></div>
+                                <div>21.08.2025<br>15:31</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- <div class="form">
+        <main>
+            <div class="d-flex justify-content-center align-items-center">
+            <form>
+                <div class="back-link mt-4">
+                    <a href="#" class="d-flex align-items-center">
+                    <img src="../src/images/arrow-back-icon.png" alt="back">
+                    <span class="ms-2">Назад</span>
+                    </a>
+                </div>
+
+                <div class="mb-3 mt-2">
+                    <b>Присоединиться к компании</b>
+                </div>
+
+                <div class="mb-3 double-input width-100-70">
+                    <div>
+                    <label for="certificate" class="form-label">Сертификат</label>
+                    <input type="text" class="form-control" id="certificate">
+                    </div>
+                    <div>
+                    <input type="file" id="fileUpload" name="fileUpload" multiple style="display:none;">
+                    <label for="fileUpload" class="cursor-pointer">Выбрать файл ЭЦП</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="keyPassword" class="form-label">Пароль к хранилищу ключей ЭЦП</label>
+                    <div class="input-group mb-3">
+                    <input id="keyPassword" type="password" class="form-control" aria-describedby="toggleKeyPassword" aria-label="Password">
+                    <span class="input-group-text" role="button" id="toggleKeyPassword">
+                        <img src="../src/images/eye-icon.svg" alt="show/hide password">
+                    </span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="organizationName" class="form-label">Наименование Организации</label>
+                    <input type="text" class="form-control light-bg" id="organizationName">
+                </div>
+
+                <button type="submit" class="btn mt-5">Завершить регистрацию</button>
+
+                <div class="d-flex justify-content-center mt-4">
+                    <span>У вас уже есть учетная запись?</span>
+                    <a href="#" class="ms-2">Войти</a>
+                </div>
+            </form>
+
+            </div>
+            <footer class="d-flex align-items-center flex-column">
+                <div>
+                    <a href="#">Условия пользования</a>
+                    <a href="#" class="ms-3">Политика конфидициальности</a>
+                </div>
+                <div>©2025 Все права защищены</div>
+            </footer>
+        </main>
+    </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

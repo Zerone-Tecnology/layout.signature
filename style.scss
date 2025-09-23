@@ -2,6 +2,8 @@ $white: #fff;
 $black: #000000;
 $background-white: #fdfdfd;
 $links-color: #0289CB;
+$blue-color: #2F81FF;
+$gray-color: #585858;
 
 @font-face {
     font-family: 'NeueMontreal';
@@ -45,6 +47,9 @@ $links-color: #0289CB;
 html, body {
   height: 100%;
   margin: 0;
+  font-family: 'NeueMontreal';
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -65,6 +70,94 @@ main {
 a {
     color: $links-color
 }
+
+li {
+    list-style-type: none;
+}
+
+.fs-14px {
+    font-size: 14px;
+}
+
+.fs-15px {
+    font-size: 15px;
+}
+
+.fs-16px {
+    font-size: 16px;
+}
+
+.fs-20px {
+    font-size: 20px;
+}
+
+.fs-24px {
+    font-size: 24px;
+}
+
+.c979797 {
+    color: #979797;
+}
+
+.btn-dark {
+    background-color: $black;
+    border-radius: 12px;
+}
+
+.btn-light {
+    background: none;
+    border: none;
+    border-radius: 12px;
+}
+
+
+.btn-primary {
+    background-color: $blue-color;
+}
+
+
+.card {
+    border-radius: 12px;
+}
+
+.blue-color-font {
+    color: $blue-color;
+}
+
+header {
+    padding: 30px 42px 10px 42px;
+    font-family: 'NeueMontreal';
+    border-bottom: 2px solid #e9e9e9;
+
+    li {
+        list-style-type: none; 
+    }
+
+    .logo {
+        font-size: 50px;
+        img {
+            width: 102px;
+            height: 37px;
+            font-size: 50px;
+        }
+    }
+    
+    .btn-dark {
+        height: 49px;
+        padding: 14px 71px;
+    }
+
+    #user-profile-picture {
+        position: relative;
+    }
+
+    #online-icon {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
 
 .welcome-page {
     background-image: url('src/images/welcome-background.gif');
@@ -112,7 +205,7 @@ a {
         background: rgba(255, 255, 255, 0.02);
         backdrop-filter: blur(9.3px);
         -webkit-backdrop-filter: blur(9.3px);
-        color: #fff;
+        color: $white;
         cursor: pointer;
         border: 1px solid $white;
         font-size: 35px;
@@ -149,7 +242,7 @@ a {
         }
 
         label {
-            color: #585858;
+            color: $gray-color;
         }
 
         label.cursor-pointer:hover{
@@ -158,7 +251,7 @@ a {
 
         input {
             background-color: #F0F0F0;
-            border: 1px solid #585858;
+            border: 1px solid $gray-color;
             height: 48px;
             border-radius: 9px;
 
@@ -213,7 +306,7 @@ a {
             }
             span {
                 background-color: #F0F0F0;
-                border: 1px solid #585858;
+                border: 1px solid $gray-color;
                 border-radius: 9px;
             }
         }
@@ -239,3 +332,216 @@ a {
         font-size: 12px;
     }
 }
+
+.main {
+    padding-left: 42px;
+    padding-top: 29px;
+    max-height: calc(100% - 117px);
+
+    .cards {
+        margin-bottom: 24px;
+        .card{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px 34px;
+            border-radius: 14px;
+            height: 101px;
+            border: none;
+
+            img {
+                margin-right: 20px; 
+            }
+
+            div:nth-of-type(2) div:nth-of-type(1) {
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            div:nth-of-type(2) div:nth-of-type(2) {
+                color: $gray-color;
+                font-weight: 500;
+            }
+        }
+
+        .card-contracts {
+            background-color: #ECECF0;
+        }
+
+        .card-agreements {
+            background-color: #ECF0EC;
+        }
+
+        .card-terminations {
+            background-color: #ECF0ED;
+        }
+
+        .card-notifications {
+            background-color: #F5F5F5;
+        }
+    }
+
+    main {
+        padding-right: 43px;
+    }
+
+    aside {
+        width: 20%;
+        padding-right: 18px;
+        padding-bottom: 23px;
+
+        .card {
+            height: 101px;
+            background-color: #F5F5F5;
+            margin-bottom: 24px;
+            border: none;
+        }
+
+        button {
+            height: 46px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            padding: 16px; 
+        }
+
+        .btn-primary {
+            width: 100%;
+            border-radius: 12px;
+            height: 69px;
+            font-weight: 700;
+        }
+
+        nav{
+            color: $gray-color;
+            a {
+                text-decoration: none;
+            }
+            ul {
+                padding-left: 0px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding-left: 16px;
+                    height: 46px;
+                    font-weight: 500;
+                    color: $gray-color;
+                    margin-bottom: 5px;
+
+                    div {
+                        display: flex;
+                    }
+                }
+            }
+            .active {
+                background-color: #F0F0EC;
+                border-radius: 12px;
+                color: $black;
+                img {
+                    filter: brightness(0%);
+                }
+            }
+        }
+    }
+
+    .contracts {
+        border-radius: 12px;
+        background-color: #F5F5F5;
+        padding: 0 10px;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;
+
+        .input-group {
+            background-color: $white;
+            border-radius: 12px;
+            padding-left: 15px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+
+            &:nth-of-type(1) {
+                width: 30%;
+            }
+
+            &:nth-of-type(2) {
+                width: 20%;
+            }
+
+            input {
+                background: none;
+                border: none;
+                border-radius: 12px;
+            }
+
+            input::placeholder {
+                font-weight: 500;
+                color: #585858;
+                font-size: 16px;
+                font-family: 'NeueMontreal';
+            }
+
+            input:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+            select{
+                border: none;
+                color: #585858;
+                font-weight: 500;
+            }
+
+            
+            select:focus  {
+                border: none;
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        .sorting {
+            
+            .contracts-table-wrapper {
+                overflow-y: auto;
+                border: 1px solid #ccc;
+                border-radius: 12px;
+            }
+
+            /* grid structure */
+            .contracts-table-row {
+                display: grid;
+                grid-template-columns: repeat(9, auto);
+                align-items: center;
+                padding: 8px;
+
+                select {
+                    width: auto;
+                    background-color: $black;
+                    color: $white;
+                }
+            }
+
+            /* header styling */
+            .contracts-table-header {
+                position: sticky;
+                top: 0;
+                font-weight: bold;
+                z-index: 2;
+                background-color: #F5F5F5;
+                padding-top: 10px;
+            }
+
+            /* body rows */
+            .contracts-table-body .contracts-table-row {
+                background: #f5f5f5;
+                border-radius: 8px;
+                margin-bottom: 6px;
+            }
+        }
+
+    }
+
+
+
+}
+
