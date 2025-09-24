@@ -49,8 +49,7 @@ main {
 }
 .logo img {
   height: 27px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 a {
@@ -81,10 +80,6 @@ li {
   font-size: 24px;
 }
 
-.c979797 {
-  color: #979797;
-}
-
 .btn-dark {
   background-color: #000000;
   border-radius: 12px;
@@ -108,10 +103,43 @@ li {
   color: #2F81FF;
 }
 
-header {
-  padding: 30px 42px 10px 42px;
-  font-family: "NeueMontreal";
+.wait-color-font {
+  color: #F1B816;
+}
+
+.signed-color-font {
+  color: #03A740;
+}
+
+.rejected-color-font {
+  color: #F95F5F;
+}
+
+.c979797 {
+  color: #979797;
+}
+
+.archive-color-font {
+  color: #B4B6B8;
+}
+
+.c070707 {
+  color: #070707;
+}
+
+.c5A4DF5 {
+  color: #5A4DF5;
+}
+
+body > header {
   border-bottom: 2px solid #e9e9e9;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  padding: 30px 0px 10px 0px;
+  font-family: "NeueMontreal";
 }
 header li {
   list-style-type: none;
@@ -138,24 +166,50 @@ header #online-icon {
 }
 
 .welcome-page {
+  box-sizing: border-box;
+  min-height: 100vh;
+  height: auto;
+  padding: 44px 62px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  color: #fff;
+  font-family: "NeueMontreal";
   background-image: url("src/images/welcome-background.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 44px 62px;
+}
+.welcome-page .container {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  color: #fff;
-  font-family: "NeueMontreal";
+}
+.welcome-page header {
+  flex: 0 0 auto; /* stays at top */
+}
+.welcome-page main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .welcome-page main > div:first-child {
-  flex: 1;
+  /* this can remain to push the heading down a bit */
+  flex: 1 0 auto;
   padding-top: 150px;
+  padding-bottom: 45px;
+}
+.welcome-page main > div:last-child {
+  display: flex;
+  justify-content: flex-end; /* right side */
+  align-items: flex-end; /* in case its height changes */
+  gap: 0;
 }
 .welcome-page h1 {
   font-size: 98px;
   max-width: 1056px;
+  font-weight: 400;
 }
 .welcome-page .logo {
   font-size: 37px;
@@ -163,14 +217,13 @@ header #online-icon {
 .welcome-page .logo img {
   width: 74px;
   height: 27px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .welcome-page ul {
   gap: 44px;
 }
 .welcome-page ul li {
-  list-style-type: none;
+  list-style: none;
   font-size: 23px;
 }
 .welcome-page button {
@@ -284,7 +337,7 @@ header #online-icon {
 }
 
 .main {
-  padding-left: 42px;
+  padding-left: 20px;
   padding-top: 29px;
   max-height: calc(100% - 117px);
 }
@@ -324,7 +377,7 @@ header #online-icon {
   background-color: #F5F5F5;
 }
 .main main {
-  padding-right: 43px;
+  padding-right: 20px;
 }
 .main aside {
   width: 20%;
@@ -381,10 +434,11 @@ header #online-icon {
   filter: brightness(0%);
 }
 .main .contracts {
-  border-radius: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
   background-color: #F5F5F5;
   padding: 0 10px;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 .main .contracts .input-group {
@@ -404,12 +458,6 @@ header #online-icon {
   background: none;
   border: none;
   border-radius: 12px;
-}
-.main .contracts .input-group input::-moz-placeholder {
-  font-weight: 500;
-  color: #585858;
-  font-size: 16px;
-  font-family: "NeueMontreal";
 }
 .main .contracts .input-group input::placeholder {
   font-weight: 500;
@@ -432,9 +480,9 @@ header #online-icon {
   box-shadow: none;
 }
 .main .contracts .sorting {
-  /* grid structure */
-  /* header styling */
-  /* body rows */
+  /* UNIFIED grid structure for ALL rows */
+  /* Header-specific styling */
+  /* Body rows styling */
 }
 .main .contracts .sorting .contracts-table-wrapper {
   overflow-y: auto;
@@ -443,14 +491,46 @@ header #online-icon {
 }
 .main .contracts .sorting .contracts-table-row {
   display: grid;
-  grid-template-columns: repeat(9, auto);
+  grid-template-columns: auto 90px 2fr 110px 3fr 4fr 4fr 190px 119px;
   align-items: center;
-  padding: 8px;
+  padding-right: 20px;
+  font-family: "NeueMontreal";
+  padding-left: 20px;
+  word-wrap: break-word;
 }
-.main .contracts .sorting .contracts-table-row select {
-  width: auto;
-  background-color: #000000;
-  color: #fff;
+.main .contracts .sorting .contracts-table-row > div {
+  padding-right: 10px;
+  /* Ensure all divs have consistent behavior */
+  min-width: 0; /* Prevents overflow issues */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .contracts .sorting .contracts-table-row input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  width: 19px;
+  height: 19px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.main .contracts .sorting .contracts-table-row input[type=checkbox]:checked {
+  background-color: #2F81FF;
+  border: none;
+}
+.main .contracts .sorting .contracts-table-row input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 .main .contracts .sorting .contracts-table-header {
   position: sticky;
@@ -460,8 +540,151 @@ header #online-icon {
   background-color: #F5F5F5;
   padding-top: 10px;
 }
+.main .contracts .sorting .contracts-table-header .contracts-table-row {
+  font-weight: 500;
+  color: #585858;
+  /* Style selects in header to fit the grid properly */
+}
+.main .contracts .sorting .contracts-table-header .contracts-table-row select {
+  width: min-content; /* Take full width of grid cell */
+  background-color: #000000;
+  color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  padding-right: 30px;
+  border-radius: 4px;
+  border: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpolyline points='4,6 8,10 12,6' fill='none' stroke='white' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px 18px;
+}
 .main .contracts .sorting .contracts-table-body .contracts-table-row {
-  background: #f5f5f5;
+  background: #FDFDFD;
   border-radius: 8px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  min-height: 120px;
+  font-weight: 500;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #585858;
+}
+
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1920px;
+  }
+}
+@media (min-width: 576px) {
+  .container, .container-sm {
+    max-width: none;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 575px) {
+  .container, .container-sm {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+@media (max-width: 1399px) {
+  .main aside {
+    width: auto;
+    font-size: 14px;
+  }
+  .main aside .fs-15px {
+    font-size: 14px;
+  }
+  .main aside .fs-14px {
+    font-size: 12px;
+  }
+  .main aside button {
+    font-size: 14px;
+  }
+  .main aside .btn-primary img {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media (max-width: 1199px) {
+  .welcome-page h1 {
+    font-size: 80px;
+    max-width: 800px;
+  }
+}
+@media (max-width: 991px) {
+  .welcome-page {
+    padding: 44px 0px;
+  }
+  .welcome-page h1 {
+    font-size: 60px;
+  }
+  .welcome-page main > div:first-child {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .welcome-page {
+    padding: 44px 0px;
+  }
+  .welcome-page h1 {
+    font-size: 60px;
+  }
+  .welcome-page main > div:first-child {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 575px) {
+  .welcome-page h1 {
+    font-size: 34px;
+  }
+  .welcome-page button {
+    width: 100%;
+  }
+  .welcome-page .logo {
+    font-size: 18px;
+  }
+  .welcome-page .logo img {
+    width: 38px;
+    height: 14px;
+  }
+  .welcome-page .menu li {
+    font-size: 14px;
+    flex-direction: row-reverse;
+  }
+  .welcome-page .menu li img {
+    height: 14px;
+    width: 14px;
+    margin-left: 6px;
+  }
+  .form {
+    padding-top: 0;
+  }
+  .form form {
+    font-size: 12px;
+    margin: 18px;
+    padding: 30px;
+    padding-top: 60px;
+  }
+  .form form .logo img {
+    width: 73px;
+    height: 27px;
+  }
+  .form form label {
+    font-size: 12px;
+    text-align: center;
+  }
+  .form form input {
+    height: 46px;
+  }
+  .form form b {
+    font-size: 16px;
+  }
+  .form form button {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */
