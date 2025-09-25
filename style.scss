@@ -153,6 +153,14 @@ li {
     color: #5A4DF5;
 }
 
+.red-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: -5px;
+    margin-bottom: 5px;
+}
+
 body > header {
     border-bottom: 2px solid #e9e9e9;
     padding-left: 20px;
@@ -621,6 +629,42 @@ header {
                     border-width: 0 2px 2px 0;
                     transform: translate(-50%, -50%) rotate(45deg);
                 }
+
+                .status-archived {
+                    color: #B4B6B8;
+                }
+
+                .status-waiting {
+                    color: #F1B816;
+                    svg path{
+                        fill: #F1B816;
+                    }
+                }
+
+                .status-signed {
+                    color: #03A740;
+                    svg path{
+                        fill: #03A740;
+                    }
+                }
+
+                .status-rejected {
+                    color: #F95F5F;
+                    svg path{
+                        fill: #F95F5F;
+                    }
+                }
+
+                
+                .status-unsend {
+                    color: #2F81FF;
+                    svg path{
+                        fill: #2F81FF;
+                    }
+                }
+
+
+
             }
 
             /* Header-specific styling */
@@ -1160,6 +1204,14 @@ header {
 
                 &.status-unsended .status-color small{
                     color: #2F81FF;
+                }
+
+                &.status-rejected::before {
+                    background-color: #F95F5F;
+                }
+
+                &.status-rejected .status-color small{
+                    color: #F95F5F;
                 }
             }
         }

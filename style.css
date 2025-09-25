@@ -135,6 +135,14 @@ li {
   color: #5A4DF5;
 }
 
+.red-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: -5px;
+  margin-bottom: 5px;
+}
+
 body > header {
   border-bottom: 2px solid #e9e9e9;
   padding-left: 20px;
@@ -537,6 +545,33 @@ header #online-icon {
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: translate(-50%, -50%) rotate(45deg);
+}
+.main .contracts .sorting .contracts-table-row .status-archived {
+  color: #B4B6B8;
+}
+.main .contracts .sorting .contracts-table-row .status-waiting {
+  color: #F1B816;
+}
+.main .contracts .sorting .contracts-table-row .status-waiting svg path {
+  fill: #F1B816;
+}
+.main .contracts .sorting .contracts-table-row .status-signed {
+  color: #03A740;
+}
+.main .contracts .sorting .contracts-table-row .status-signed svg path {
+  fill: #03A740;
+}
+.main .contracts .sorting .contracts-table-row .status-rejected {
+  color: #F95F5F;
+}
+.main .contracts .sorting .contracts-table-row .status-rejected svg path {
+  fill: #F95F5F;
+}
+.main .contracts .sorting .contracts-table-row .status-unsend {
+  color: #2F81FF;
+}
+.main .contracts .sorting .contracts-table-row .status-unsend svg path {
+  fill: #2F81FF;
 }
 .main .contracts .sorting .contracts-table-header {
   position: sticky;
@@ -956,6 +991,12 @@ header #online-icon {
   }
   .main main .mobile-contracts > div.status-unsended .status-color small {
     color: #2F81FF;
+  }
+  .main main .mobile-contracts > div.status-rejected::before {
+    background-color: #F95F5F;
+  }
+  .main main .mobile-contracts > div.status-rejected .status-color small {
+    color: #F95F5F;
   }
   .main .nav-tabs {
     border: none;
