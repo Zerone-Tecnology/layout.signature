@@ -60,6 +60,10 @@ li {
   list-style-type: none;
 }
 
+.fs-12px {
+  font-size: 14px;
+}
+
 .fs-14px {
   font-size: 14px;
 }
@@ -338,7 +342,6 @@ header #online-icon {
 
 .main {
   padding-left: 20px;
-  padding-top: 29px;
   max-height: calc(100% - 117px);
 }
 .main .cards {
@@ -378,17 +381,20 @@ header #online-icon {
 }
 .main main {
   padding-right: 20px;
+  padding-top: 29px;
 }
 .main aside {
   width: 20%;
   padding-right: 18px;
   padding-bottom: 23px;
+  padding-top: 29px;
 }
 .main aside .card {
   height: 101px;
   background-color: #F5F5F5;
   margin-bottom: 24px;
   border: none;
+  padding: 0 16px;
 }
 .main aside button {
   height: 46px;
@@ -593,8 +599,8 @@ header #online-icon {
 }
 @media (max-width: 1399px) {
   .main aside {
-    width: auto;
     font-size: 14px;
+    width: 15%;
   }
   .main aside .fs-15px {
     font-size: 14px;
@@ -609,14 +615,372 @@ header #online-icon {
     width: 15px;
     height: 15px;
   }
+  .main .contracts {
+    font-size: 14px;
+  }
+  .main .contracts select {
+    font-size: 14px;
+  }
+  .main .contracts .input-group input::placeholder {
+    font-size: 14px;
+  }
+  .main .contracts .sorting .contracts-table-row {
+    grid-template-columns: auto 70px 2fr 90px 90px 4fr 4fr 150px 97px;
+  }
+  .main .contracts .sorting .contracts-table-header .contracts-table-row select {
+    padding: 5px 8px;
+    padding-right: 22px;
+    background-position: right 5px center;
+  }
+  .main .cards .card {
+    padding: 10px 20px;
+  }
+  .main .cards .card div:nth-of-type(2) div:nth-of-type(1) {
+    font-size: 20px;
+  }
+  .main .cards .card div:nth-of-type(2) div:nth-of-type(2) {
+    font-size: 14px;
+  }
 }
 @media (max-width: 1199px) {
   .welcome-page h1 {
     font-size: 80px;
     max-width: 800px;
   }
+  body > header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  body > header .logo {
+    font-size: 36px;
+  }
+  body > header .logo img {
+    width: 80px;
+    object-fit: contain;
+    font-size: 50px;
+  }
+  body > header .fs-16px {
+    font-size: 14px;
+  }
+  body > header .fs-20px {
+    font-size: 16px;
+  }
+  body > header .fs-24px {
+    font-size: 20px;
+  }
+  body > header .btn-dark {
+    height: 40px;
+    padding: 0 40px;
+  }
+  body > header ul.gap-4 {
+    gap: 1rem;
+  }
+  body > header #user-profile-picture img:first-of-type {
+    height: 40px;
+  }
+  .main {
+    padding-left: 10px;
+    max-height: calc(100% - 96px);
+  }
+  .main main {
+    padding-right: 10px;
+  }
+  .main aside {
+    width: 60px;
+    transition: width 0.2s;
+    height: calc(100% - 96px);
+    overflow: hidden;
+    position: absolute;
+    padding-right: 10px;
+    /* text elements */
+    /* make sure icons always visible */
+  }
+  .main aside .card img {
+    margin-top: 10px;
+  }
+  .main aside:hover {
+    width: 260px; /* expand */
+    z-index: 1000; /* sit above main content */
+    background: #fff;
+    box-shadow: 5px 0px 10px -5px rgba(0, 0, 0, 0.15);
+  }
+  .main aside nav ul li span,
+  .main aside .fw-medium,
+  .main aside .fs-14px,
+  .main aside button span,
+  .main aside .btn-primary div:nth-of-type(2) {
+    opacity: 0;
+    max-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: opacity 0.2s ease, max-width 0.2s ease;
+    /* no delay here, hides immediately */
+  }
+  .main aside:hover nav ul li span, .main aside:hover .fw-medium, .main aside:hover .fs-14px, .main aside:hover button span, .main aside:hover .btn-primary div:nth-of-type(2) {
+    opacity: 1;
+    max-width: 500px; /* large enough for text */
+    transition: opacity 0.2s ease 0.2s, max-width 0.2s ease 0.2s;
+    /* delay only on showing */
+  }
+  .main aside:hover .card img {
+    margin-right: 10px;
+  }
+  .main aside nav ul li img,
+  .main aside button img {
+    opacity: 1 !important;
+    max-width: none !important;
+    transition: none !important;
+  }
+  .main .hidden-space {
+    width: 60px;
+  }
 }
 @media (max-width: 991px) {
+  #mobile-header .search-bar {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 10px 22px;
+    gap: 22px;
+  }
+  #mobile-header .search-bar input {
+    border: none;
+    font-weight: 500;
+  }
+  #mobile-header .search-bar img:nth-of-type(2) {
+    width: 30px;
+  }
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+  }
+  .menu-overlay.show {
+    display: block;
+  }
+  .menu-overlay.show .mobile-menu {
+    transform: translateX(0);
+  }
+  .mobile-menu {
+    padding-top: 32px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100%;
+    background: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  .mobile-menu hr {
+    margin: 0 20px;
+    color: #D9D9D9;
+  }
+  .mobile-menu button {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  .mobile-menu .menu-header {
+    border-bottom: 1px solid #eee;
+  }
+  .mobile-menu .menu-header .logo {
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  .mobile-menu .menu-header .logo img {
+    width: 56px;
+  }
+  .mobile-menu .menu-header .user-info {
+    background-color: #ECECF0;
+    padding: 12px 20px;
+  }
+  .mobile-menu ul {
+    padding: 0;
+  }
+  .mobile-menu ul a {
+    text-decoration: none;
+    color: #585858;
+  }
+  .mobile-menu ul li {
+    display: flex;
+    padding-left: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    gap: 15px;
+    align-items: center;
+    font-weight: 500;
+  }
+  .mobile-menu ul li svg {
+    width: 18px;
+    height: 18px;
+  }
+  .mobile-menu ul li.active {
+    background-color: #ECECF0;
+    color: #2F81FF;
+  }
+  .mobile-menu ul li.active path {
+    fill: #2F81FF;
+  }
+  .mobile-menu ul li.disabled {
+    color: #a8a8a8;
+  }
+  .mobile-menu ul li.disabled path {
+    fill: #a8a8a8;
+  }
+  #mobile-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-radius: 35px 35px 0 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 1000;
+    font-size: 14px;
+    font-weight: 500;
+    color: #585858;
+  }
+  #mobile-footer img {
+    width: 26px;
+  }
+  #mobile-footer .img-container {
+    background-color: #2F81FF;
+    margin-top: -40px;
+    padding: 20px;
+    border-radius: 50%;
+  }
+  #mobile-footer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  #mobile-footer > div.active {
+    color: #2F81FF;
+  }
+  #mobile-footer > div.active path {
+    fill: #2F81FF;
+  }
+  .main {
+    padding: 22px 18px;
+    max-height: 100%;
+    background-color: #f7f7f7;
+  }
+  .main main {
+    height: calc(100% - 28px);
+  }
+  .main main .tab-content {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  .main main .tab-content::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  .main main hr {
+    width: 100vw;
+    margin: 0;
+    margin-left: -18px;
+    color: #D9D9D9;
+    height: 2px;
+    border: none;
+    background: #D9D9D9;
+  }
+  .main main .mobile-contracts {
+    padding-top: 18px;
+  }
+  .main main .mobile-contracts > div {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    gap: 11px;
+    color: #000000;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 6px;
+  }
+  .main main .mobile-contracts > div small {
+    font-size: 10px;
+    color: #A4A4A5;
+  }
+  .main main .mobile-contracts > div .img-container {
+    background-color: #F5F5F5;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main main .mobile-contracts > div .img-container img {
+    width: 19px;
+    object-fit: contain;
+  }
+  .main main .mobile-contracts > div::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+  }
+  .main main .mobile-contracts > div.status-archived::before {
+    background-color: #A4A4A5;
+  }
+  .main main .mobile-contracts > div.status-signed::before {
+    background-color: #03A740;
+  }
+  .main main .mobile-contracts > div.status-signed .status-color small {
+    color: #03A740;
+  }
+  .main main .mobile-contracts > div.status-waiting::before {
+    background-color: #F1B816;
+  }
+  .main main .mobile-contracts > div.status-waiting .status-color small {
+    color: #F1B816;
+  }
+  .main main .mobile-contracts > div.status-unsended::before {
+    background-color: #2F81FF;
+  }
+  .main main .mobile-contracts > div.status-unsended .status-color small {
+    color: #2F81FF;
+  }
+  .main .nav-tabs {
+    border: none;
+  }
+  .main .nav-tabs .nav-item button.nav-link {
+    background: none;
+    border: none;
+    font-weight: 500;
+    color: #585858;
+  }
+  .main .nav-tabs .nav-item button.nav-link.active {
+    color: #2F81FF;
+    position: relative;
+  }
+  .main .nav-tabs .nav-item button.nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 4px;
+    background: #2F81FF;
+    border-radius: 4px 4px 0 0;
+  }
   .welcome-page {
     padding: 44px 0px;
   }
