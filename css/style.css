@@ -1,18 +1,18 @@
 @font-face {
   font-family: "NeueMontreal";
-  src: url("../src/fonts/NeueMontreal/ppneuemontreal-book.otf") format("opentype");
+  src: url("src/fonts/NeueMontreal/ppneuemontreal-book.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "NeueMontreal";
-  src: url("../src/fonts/NeueMontreal/ppneuemontreal-bold.otf") format("opentype");
+  src: url("src/fonts/NeueMontreal/ppneuemontreal-bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "NeueMontreal";
-  src: url("../src/fonts/NeueMontreal/ppneuemontreal-medium.otf") format("opentype");
+  src: url("src/fonts/NeueMontreal/ppneuemontreal-medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
@@ -204,7 +204,7 @@ header #online-icon {
   flex: 1 0 auto;
   color: #fff;
   font-family: "NeueMontreal";
-  background-image: url("../src/images/welcome-background.gif");
+  background-image: url("src/images/welcome-background.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
