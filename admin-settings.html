@@ -40,7 +40,7 @@
             </ul>
         </nav>
     </header>
-    <div class="main flex-grow-1 d-none d-lg-flex">
+    <div class="main flex-grow-1 d-flex">
         <div class="hidden-space d-none d-lg-block d-xl-none"></div>
         <aside class="flex-column d-none d-lg-flex">
             <div class="card d-flex flex-row justify-content-center align-items-center">
@@ -55,9 +55,9 @@
                 </div>
             </div>
             <div class="mb-3">
-                <button class="btn btn-primary d-flex align-items-center justify-content-center">
+                <button class="btn btn-primary disabled d-flex align-items-center justify-content-center">
                     <div class="d-flex align-items-center"><img src="src/images/icons/update-icon.svg" alt="update"></div>
-                    <div><span class="ms-2 fs-15px ">ОБНОВИТЬ ДОКУМЕНТЫ</span></div>
+                    <div><span class="ms-2 fs-15px">ОБНОВИТЬ ДОКУМЕНТЫ</span></div>
                 </button>
             </div>
             <nav>
@@ -111,357 +111,291 @@
                 </button>
             </div>
         </aside>
-        <main class="flex-column ">
+        <main class="flex-column settings">
             <div class="cards d-flex gap-3 flex-wrap">
-                <div class="card col card-contracts">
-                    <div>
-                        <img src="src/images/icons/contracts-icon.svg" alt="contracts">
-                    </div>
-                    <div>
-                        <div>10</div>
-                        <div>Договоры</div>
-                    </div>
+                <div class="d-flex d-lg-none">
+                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.8571 5.83846H3.42857L7.18857 1.99736C7.29569 1.88883 7.38071 1.7597 7.43873 1.61743C7.49675 1.47516 7.52663 1.32256 7.52663 1.16843C7.52663 1.01431 7.49675 0.861708 7.43873 0.719437C7.38071 0.577165 7.29569 0.448037 7.18857 0.339502C6.97444 0.122053 6.68478 0 6.38286 0C6.08093 0 5.79127 0.122053 5.57714 0.339502L0.674286 5.35979C0.245043 5.79567 0.00255176 6.38769 0 7.00597C0.00556181 7.6202 0.247822 8.20746 0.674286 8.64048L5.57714 13.6608C5.6837 13.7689 5.81006 13.8544 5.94899 13.9127C6.08793 13.9709 6.23673 14.0005 6.3869 14C6.53706 13.9994 6.68565 13.9687 6.82419 13.9095C6.96272 13.8503 7.08848 13.7638 7.19429 13.6549C7.30009 13.5461 7.38388 13.417 7.44085 13.2751C7.49783 13.1331 7.52688 12.9811 7.52635 12.8277C7.52582 12.6743 7.49572 12.5225 7.43776 12.381C7.3798 12.2395 7.29513 12.111 7.18857 12.0029L3.42857 8.17348H14.8571C15.1602 8.17348 15.4509 8.05047 15.6653 7.83152C15.8796 7.61257 16 7.31561 16 7.00597C16 6.69633 15.8796 6.39937 15.6653 6.18042C15.4509 5.96147 15.1602 5.83846 14.8571 5.83846Z" fill="black"/>
+                    </svg>
                 </div>
-                <div class="card col card-agreements">
-                    <div>
-                        <img src="src/images/icons/agreements-icon.svg" alt="agreements">
-                    </div>
-                    <div>
-                        <div>15</div>
-                        <div>Дополнительное соглашение</div>
-                    </div>
-                </div>
-                <div class="card col card-terminations">
-                    <div>
-                        <img src="src/images/icons/terminations-icon.svg" alt="terminations">
-                    </div>
-                    <div>
-                        <div>4</div>
-                        <div>Соглашение о расторжении</div>
-                    </div>
-                </div>
-                <div class="card col card-notifications">
-                    <div>
-                        <img src="src/images/icons/notifications-icon.svg" alt="notifications">
-                    </div>
-                    <div>
-                        <div>12</div>
-                        <div>Уведомления</div>
-                    </div>
-                </div>
+                <div class="card fs-24px fw-bold p-0 align-items-start bg-transparent">НАСТРОЙКИ ЛИЧНОГО КАБИНЕТА</div>
             </div>
 
-            <div class="flex-grow-1 m-0 contracts  overflow-auto">
-                <div class="sorting d-flex contracts-table-wrapper">
-                    <div class="contracts-table w-100">
-                        <div class="contracts-table-header pb-4">
-                            <div class="d-flex">
-                                <div class="filters d-flex w-100">
-                                    <div class="input-group">
-                                        <img src="src/images/icons/search-icon.svg" alt="search">
-                                        <input 
-                                            type="text" 
-                                            id="contract-search" 
-                                            name="contract-search" 
-                                            class="form-control" 
-                                            placeholder="Поиск договоров">
-                                    </div>
-                                    <div class="input-group ms-3">
-                                        <img src="src/images/icons/filter-icon.svg" alt="filter">
-                                        <select class="form-select" name="filter">
-                                            <option value="" disabled selected hidden>Фильтр</option>
-                                            <option value="apple">one</option>
-                                            <option value="banana">two</option>
-                                            <option value="cherry">three</option>
-                                        </select>
-                                    </div>
+            <div class="content">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button" role="tab" aria-selected="true">
+                            Личный кабинет
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="sources-tab" data-bs-toggle="tab" data-bs-target="#sources" type="button" role="tab" aria-selected="false" tabindex="-1">
+                            Кабинет компании
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane show active h-10 mobile-contracts" id="info" role="tabpanel" aria-labelledby="info-tab">
+                        <div class="profile-card">
+                            <!-- Profile Header -->
+                            <div class="profile-header d-flex">
+                                <div class="avatar position-relative">
+                                    <img src="src/images/icons/user.svg" alt="user">
+                                    <img src="src/images/icons/plus-icon.svg" alt="" class="position-absolute right-bottom">
                                 </div>
-                                <div class="w-100 d-flex gap-3 justify-content-end">
-                                    <button class="btn btn-primary d-flex align-items-center justify-content-center px-4">
-                                        <div><span class="me-3 fs-15px fw-bold">ПРОСМОТРЕТЬ</span></div>
-                                        <div class="d-flex align-items-center">
-                                            <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14 5.99511C13.9951 5.46863 13.7832 4.96527 13.41 4.5941L9.12 0.291003C8.93264 0.104617 8.67919 0 8.415 0C8.15081 0 7.89736 0.104617 7.71 0.291003C7.61627 0.384033 7.54188 0.494713 7.49111 0.61666C7.44034 0.738607 7.4142 0.869407 7.4142 1.00151C7.4142 1.13362 7.44034 1.26442 7.49111 1.38637C7.54188 1.50832 7.61627 1.619 7.71 1.71203L11 4.99439H1C0.734784 4.99439 0.48043 5.09982 0.292893 5.2875C0.105357 5.47517 0 5.7297 0 5.99511C0 6.26052 0.105357 6.51506 0.292893 6.70273C0.48043 6.8904 0.734784 6.99583 1 6.99583H11L7.71 10.2882C7.5217 10.4753 7.41538 10.7296 7.41444 10.9952C7.41351 11.2607 7.51802 11.5158 7.705 11.7042C7.89198 11.8927 8.1461 11.9991 8.41146 12C8.67683 12.0009 8.9317 11.8963 9.12 11.7092L13.41 7.40613C13.7856 7.03251 13.9978 6.52507 14 5.99511Z" fill="white"/>
-                                            </svg>
-                                        </div>
-                                    </button>
-                                    <button class="btn  btn-danger d-flex align-items-center justify-content-center">
-                                        <div><span class="me-3 fs-15px fw-bold">В АРХИВ</span></div>
-                                        <div class="d-flex align-items-center">
-                                            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14.25 1.54475H9.354C9.2385 1.54475 9.1215 1.51693 9.01875 1.46361L6.65175 0.244193C6.3405 0.0842313 5.99325 2.58291e-07 5.646 2.58291e-07H3.75C1.68225 -0.000772504 0 1.73253 0 3.86304V13.1362C0 15.2667 1.68225 17 3.75 17H4.5C4.914 17 5.25 16.6546 5.25 16.2272C5.25 15.7999 4.914 15.4545 4.5 15.4545H3.75C2.5095 15.4545 1.5 14.4143 1.5 13.1362V6.18133H16.5V13.1362C16.5 14.4143 15.4905 15.4545 14.25 15.4545H13.5C13.0852 15.4545 12.75 15.7999 12.75 16.2272C12.75 16.6546 13.0852 17 13.5 17H14.25C16.3177 17 18 15.2667 18 13.1362V5.40856C18 3.27806 16.3177 1.54475 14.25 1.54475ZM1.5 3.86304C1.5 2.58489 2.5095 1.54475 3.75 1.54475H5.646C5.7615 1.54475 5.8785 1.57257 5.98125 1.62589L8.34825 2.84531C8.6595 3.00527 9.00675 3.0895 9.354 3.0895H14.25C15.2265 3.0895 16.0515 3.73785 16.362 4.63503H1.5V3.86304ZM11.7802 13.9901C12.0735 14.2922 12.0735 14.7806 11.7802 15.0828L10.5705 16.3292C10.1377 16.7751 9.56925 16.9977 9 16.9977C8.43075 16.9977 7.863 16.7751 7.43025 16.3292L6.21975 15.0828C5.9265 14.7806 5.9265 14.2922 6.21975 13.9901C6.513 13.6879 6.987 13.6879 7.28025 13.9901L8.25 14.9893V9.27238C8.25 8.84504 8.586 8.49961 9 8.49961C9.414 8.49961 9.75 8.84504 9.75 9.27238V14.9893L10.7198 13.9901C11.013 13.6879 11.487 13.6879 11.7802 13.9901Z" fill="white"/>
-                                            </svg>
-                                        </div>
-                                    </button>
+                                <div class="user-info d-flex flex-column justify-content-center gap-1">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img src="src/images/icons/settings-icon.svg" alt="settings">
+                                        <h5 class="fs-24px">Аман Турагалиев</h5>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img src="src/images/icons/check-icon.svg" alt="">
+                                        <h5 class="fs-16px">ТОО "Камкор Менеджмент"</h5>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="contracts-table-row mt-3">
-                                <div><input type="checkbox" class="checkbox"></div>
-                                <div>
-                                    <select class="form-select disabled" name="filter">
-                                        <option value="" disabled="" selected="" hidden="">ТИП</option>
-                                        <option value="apple">one</option>
-                                        <option value="banana">two</option>
-                                        <option value="cherry">three</option>
-                                    </select>
+
+                            <!-- Form Sections -->
+                            <div class="form-sections d-flex">
+                                <!-- General Info Section -->
+                                <div class="section w-100">
+                                    <h6>Общие сведения</h6>
+                                    
+                                    <div class="form-group mb-5">
+                                        <label>Адрес корпоративной электронной почты</label>
+                                        <input type="email" class="form-control" value="alan@tzhzh.kamkor.org">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Имя</label>
+                                                <input type="text" class="form-control" value="Аман">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Фамилия</label>
+                                                <input type="text" class="form-control" value="Турагалиев">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Телефон</label>
+                                        <input type="tel" class="form-control" value="77747750555">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Должность</label>
+                                        <input type="text" class="form-control light-bg" value="Директор">
+                                    </div>
                                 </div>
-                                <div>№</div>
-                                <div>
-                                    <select class="form-select" name="filter">
-                                        <option value="" disabled="" selected="" hidden="">ИЗДАН</option>
-                                        <option value="apple">one</option>
-                                        <option value="banana">two</option>
-                                        <option value="cherry">three</option>
-                                    </select>
-                                </div>
-                                <div>Дата Под.</div>
-                                <div>
-                                    <select class="form-select" name="filter">
-                                        <option value="" disabled="" selected="" hidden="">КОНТРАГЕНТ</option>
-                                        <option value="apple">one</option>
-                                        <option value="banana">two</option>
-                                        <option value="cherry">three</option>
-                                    </select>
-                                </div>
-                                <div>Описание</div>
-                                <div>
-                                    <select class="form-select" name="filter">
-                                        <option value="" disabled="" selected="" hidden="">СОГЛАСОВАНИЕ</option>
-                                        <option value="apple">one</option>
-                                        <option value="banana">two</option>
-                                        <option value="cherry">three</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <select class="form-select" name="filter">
-                                        <option value="" disabled="" selected="" hidden="">ИЗМЕНЕН</option>
-                                        <option value="apple">one</option>
-                                        <option value="banana">two</option>
-                                        <option value="cherry">three</option>
-                                    </select>
+
+                                <!-- Password Section -->
+                                <div class="section w-100">
+                                    <h6>Изменить пароль</h6>
+                                    
+                                    <div class="form-group">
+                                        <label>Текущий пароль</label>
+                                        <div class="input-group light-bg">
+                                            <input id="password" type="password" class="form-control" aria-describedby="togglePassword" aria-label="Password">
+                                            <span class="input-group-text" role="button" id="togglePassword">
+                                                <img src="src/images/icons/eye-icon.svg" alt="show/hide password">
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Новый пароль</label>
+                                        <div class="input-group light-bg">
+                                            <input id="password" type="password" class="form-control" aria-describedby="togglePassword" aria-label="Password">
+                                            <span class="input-group-text" role="button" id="togglePassword">
+                                                <img src="src/images/icons/eye-icon.svg" alt="show/hide password">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="save-btn opacity-50">
+                                            Сохранить пароль
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-
-                        <div class="contracts-table-body">
-                            <div class="contracts-table-row">
-                                <div><input type="checkbox"></div>
-                                <div>ЭДО</div>
-                                <div>00000001</div>
-                                <div>21.08.2025<br><div class="fs-14px archive-color-font">15:31</div></div>
-                                <div>30.08.2025</div>
-                                <div>
-                                    <div class="fw-bold c070707">Марганов А.А.</div>
-                                    <div class="fs-14px archive-color-font">ТОО “Теміржол жөндеу”</div>
-                                    <div class="fw-bold c5A4DF5">Изучает договор</div>
+                    </div>
+                    <div class="tab-pane" id="sources" role="tabpanel" aria-labelledby="sources-tab">
+                        <div class="company-card">
+                            <!-- Profile Header -->
+                            <div class="company-header d-flex">
+                                <div class="avatar position-relative">
+                                    <img src="src/images/icons/building-with-background-icon.svg" alt="user">
+                                    <img src="src/images/icons/plus-icon.svg" alt="" class="position-absolute right-bottom">
                                 </div>
-                                <div>
-                                    <div class="fw-bold c070707">Договор на строительст...структуры № 7 8/2025</div>
-                                    <div>Каждая из сторон настоящего Договора обязуется выпол...</div>
-                                </div>
-                                <div>
-                                    <div>Исполнение</div>
-                                    <div  class="status-archived">
-                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1_4076)">
-                                            <path d="M0.861001 8.19421C0.462788 8.74405 0.176982 9.36706 0.0199594 10.0275C-0.0100347 10.159 -0.00616993 10.296 0.031192 10.4256C0.068554 10.5552 0.138191 10.6732 0.233583 10.7685C0.328976 10.8639 0.447003 10.9335 0.576616 10.9708C0.706229 11.0081 0.843187 11.0118 0.974668 10.9818C1.63414 10.8245 2.25617 10.5389 2.80525 10.1412C3.06344 9.88339 3.20863 9.53356 3.20889 9.16868C3.20915 8.80381 3.06445 8.45377 2.80663 8.19558C2.5488 7.9374 2.19897 7.7922 1.8341 7.79194C1.46922 7.79169 1.11919 7.93639 0.861001 8.19421ZM2.15717 9.49083C1.78775 9.72744 1.38649 9.91016 0.965501 10.0335C1.08901 9.61257 1.27173 9.21134 1.50817 8.84183C1.59461 8.75835 1.71039 8.71215 1.83056 8.71319C1.95073 8.71424 2.06569 8.76244 2.15067 8.84742C2.23565 8.9324 2.28385 9.04735 2.28489 9.16753C2.28594 9.2877 2.23974 9.40347 2.15625 9.48992L2.15717 9.49083ZM8.24979 3.89596C8.24979 4.19985 8.12907 4.4913 7.91419 4.70619C7.6993 4.92107 7.40785 5.04179 7.10396 5.04179C6.80007 5.04179 6.50862 4.92107 6.29373 4.70619C6.07885 4.4913 5.95813 4.19985 5.95813 3.89596C5.95813 3.59207 6.07885 3.30062 6.29373 3.08573C6.50862 2.87085 6.80007 2.75013 7.10396 2.75013C7.40785 2.75013 7.6993 2.87085 7.91419 3.08573C8.12907 3.30062 8.24979 3.59207 8.24979 3.89596ZM9.61196 0.000125435C8.52124 -0.00635844 7.4437 0.238609 6.46298 0.71601C5.48227 1.19341 4.62476 1.8904 3.95704 2.75288C3.22881 2.77805 2.51456 2.95986 1.86292 3.28592C1.10723 3.6339 0.49032 4.22562 0.111168 4.96617C0.0221913 5.17277 -0.0139252 5.39828 0.00607972 5.62233C0.0260846 5.84639 0.101581 6.06193 0.225751 6.2495C0.351107 6.44167 0.522424 6.59952 0.724185 6.70876C0.925945 6.81801 1.15177 6.87519 1.38121 6.87513H2.52063C2.94545 6.87717 3.35228 7.04684 3.65268 7.34724C3.95308 7.64763 4.12274 8.05447 4.12479 8.47929V9.61871C4.12463 9.84806 4.18167 10.0738 4.29075 10.2756C4.39983 10.4773 4.55751 10.6487 4.7495 10.7742C4.93707 10.8983 5.15261 10.9738 5.37667 10.9938C5.60072 11.0138 5.82623 10.9777 6.03283 10.8888C6.77338 10.5096 7.3651 9.89269 7.71308 9.137C8.03914 8.48536 8.22095 7.77111 8.24613 7.04288C9.10997 6.37345 9.80781 5.51384 10.2854 4.53084C10.763 3.54785 11.0074 2.46797 10.9998 1.37513C10.9993 1.19363 10.9629 1.01402 10.8928 0.846607C10.8227 0.67919 10.7203 0.527256 10.5913 0.399515C10.4624 0.271774 10.3095 0.170739 10.1414 0.102204C9.97339 0.0336676 9.79345 -0.00102141 9.61196 0.000125435ZM1.99171 5.95846H1.38121C1.3037 5.95905 1.22731 5.93998 1.15918 5.90303C1.09105 5.86608 1.0334 5.81245 0.991626 5.74717C0.950588 5.68653 0.925504 5.61652 0.918694 5.54362C0.911884 5.47072 0.923569 5.39727 0.952668 5.33008C1.24799 4.78885 1.71196 4.35884 2.27404 4.10542C2.56446 3.9598 2.87107 3.84903 3.1875 3.77542C2.73193 4.47041 2.33209 5.20037 1.99171 5.95846ZM6.89588 8.72588C6.64246 9.28781 6.21265 9.75174 5.67167 10.0473C5.60441 10.0764 5.53089 10.0881 5.4579 10.0813C5.38492 10.0745 5.31483 10.0494 5.25413 10.0083C5.18884 9.96652 5.13521 9.90887 5.09826 9.84074C5.06131 9.7726 5.04224 9.69621 5.04283 9.61871V9.00821C5.80092 8.66783 6.53088 8.26799 7.22588 7.81242C7.15182 8.1289 7.04059 8.43552 6.8945 8.72588H6.89588ZM6.95775 6.88338C6.33753 7.31414 5.68279 7.69294 5.00021 8.01592C4.907 7.51545 4.66445 7.05494 4.30449 6.69497C3.94452 6.33501 3.48401 6.09246 2.98354 5.99925C3.30675 5.31728 3.68571 4.66316 4.11654 4.04354C5.66021 1.89029 7.25979 0.984167 9.62479 0.916792C9.74416 0.916745 9.85883 0.963268 9.94443 1.04647C10.03 1.12966 10.0798 1.24297 10.0831 1.36229C10.0158 3.74013 9.10963 5.33971 6.95638 6.88338H6.95775Z" fill="#B4B6B8"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_1_4076">
-                                            <rect width="11" height="11" fill="white"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                        <span class="fs-14px">Архивирован</span>
+                                <div class="user-info d-flex flex-column justify-content-center gap-1">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img src="src/images/icons/check-icon.svg" alt="">
+                                        <h5 class="fs-24px">ТОО "Қамқор Менеджмент"</h5>
                                     </div>
-                                </div>
-                                <div>
-                                    <div>21.08.2025</div>
-                                    <div class="fs-14px archive-color-font">15:31</div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <img src="src/images/icons/favorite-icon.svg" alt="favorite">
-                                        <img src="src/images/icons/download-icon.svg" alt="favorite">
-                                        <img src="src/images/icons/chat-icon.svg" alt="favorite">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contracts-table-row">
-                                <div><input type="checkbox"></div>
-                                <div>ЭДО</div>
-                                <div>00000001</div>
-                                <div>21.08.2025<br><div class="fs-14px archive-color-font">15:31</div></div>
-                                <div>30.08.2025</div>
-                                <div>
-                                    <div class="fw-bold c070707">Марганов А.А.</div>
-                                    <div class="fs-14px archive-color-font">ТОО “Теміржол жөндеу”</div>
-                                    <div class="fw-bold c5A4DF5">Изучает договор</div>
-                                </div>
-                                <div>
-                                    <div class="fw-bold c070707">Договор на строительст...структуры № 7 8/2025</div>
-                                    <div>Каждая из сторон настоящего Договора обязуется выпол...</div>
-                                </div>
-                                <div>
-                                    <div>Исполнение</div>
-                                    <div class="status-waiting">
-                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1_4076)">
-                                            <path d="M0.861001 8.19421C0.462788 8.74405 0.176982 9.36706 0.0199594 10.0275C-0.0100347 10.159 -0.00616993 10.296 0.031192 10.4256C0.068554 10.5552 0.138191 10.6732 0.233583 10.7685C0.328976 10.8639 0.447003 10.9335 0.576616 10.9708C0.706229 11.0081 0.843187 11.0118 0.974668 10.9818C1.63414 10.8245 2.25617 10.5389 2.80525 10.1412C3.06344 9.88339 3.20863 9.53356 3.20889 9.16868C3.20915 8.80381 3.06445 8.45377 2.80663 8.19558C2.5488 7.9374 2.19897 7.7922 1.8341 7.79194C1.46922 7.79169 1.11919 7.93639 0.861001 8.19421ZM2.15717 9.49083C1.78775 9.72744 1.38649 9.91016 0.965501 10.0335C1.08901 9.61257 1.27173 9.21134 1.50817 8.84183C1.59461 8.75835 1.71039 8.71215 1.83056 8.71319C1.95073 8.71424 2.06569 8.76244 2.15067 8.84742C2.23565 8.9324 2.28385 9.04735 2.28489 9.16753C2.28594 9.2877 2.23974 9.40347 2.15625 9.48992L2.15717 9.49083ZM8.24979 3.89596C8.24979 4.19985 8.12907 4.4913 7.91419 4.70619C7.6993 4.92107 7.40785 5.04179 7.10396 5.04179C6.80007 5.04179 6.50862 4.92107 6.29373 4.70619C6.07885 4.4913 5.95813 4.19985 5.95813 3.89596C5.95813 3.59207 6.07885 3.30062 6.29373 3.08573C6.50862 2.87085 6.80007 2.75013 7.10396 2.75013C7.40785 2.75013 7.6993 2.87085 7.91419 3.08573C8.12907 3.30062 8.24979 3.59207 8.24979 3.89596ZM9.61196 0.000125435C8.52124 -0.00635844 7.4437 0.238609 6.46298 0.71601C5.48227 1.19341 4.62476 1.8904 3.95704 2.75288C3.22881 2.77805 2.51456 2.95986 1.86292 3.28592C1.10723 3.6339 0.49032 4.22562 0.111168 4.96617C0.0221913 5.17277 -0.0139252 5.39828 0.00607972 5.62233C0.0260846 5.84639 0.101581 6.06193 0.225751 6.2495C0.351107 6.44167 0.522424 6.59952 0.724185 6.70876C0.925945 6.81801 1.15177 6.87519 1.38121 6.87513H2.52063C2.94545 6.87717 3.35228 7.04684 3.65268 7.34724C3.95308 7.64763 4.12274 8.05447 4.12479 8.47929V9.61871C4.12463 9.84806 4.18167 10.0738 4.29075 10.2756C4.39983 10.4773 4.55751 10.6487 4.7495 10.7742C4.93707 10.8983 5.15261 10.9738 5.37667 10.9938C5.60072 11.0138 5.82623 10.9777 6.03283 10.8888C6.77338 10.5096 7.3651 9.89269 7.71308 9.137C8.03914 8.48536 8.22095 7.77111 8.24613 7.04288C9.10997 6.37345 9.80781 5.51384 10.2854 4.53084C10.763 3.54785 11.0074 2.46797 10.9998 1.37513C10.9993 1.19363 10.9629 1.01402 10.8928 0.846607C10.8227 0.67919 10.7203 0.527256 10.5913 0.399515C10.4624 0.271774 10.3095 0.170739 10.1414 0.102204C9.97339 0.0336676 9.79345 -0.00102141 9.61196 0.000125435ZM1.99171 5.95846H1.38121C1.3037 5.95905 1.22731 5.93998 1.15918 5.90303C1.09105 5.86608 1.0334 5.81245 0.991626 5.74717C0.950588 5.68653 0.925504 5.61652 0.918694 5.54362C0.911884 5.47072 0.923569 5.39727 0.952668 5.33008C1.24799 4.78885 1.71196 4.35884 2.27404 4.10542C2.56446 3.9598 2.87107 3.84903 3.1875 3.77542C2.73193 4.47041 2.33209 5.20037 1.99171 5.95846ZM6.89588 8.72588C6.64246 9.28781 6.21265 9.75174 5.67167 10.0473C5.60441 10.0764 5.53089 10.0881 5.4579 10.0813C5.38492 10.0745 5.31483 10.0494 5.25413 10.0083C5.18884 9.96652 5.13521 9.90887 5.09826 9.84074C5.06131 9.7726 5.04224 9.69621 5.04283 9.61871V9.00821C5.80092 8.66783 6.53088 8.26799 7.22588 7.81242C7.15182 8.1289 7.04059 8.43552 6.8945 8.72588H6.89588ZM6.95775 6.88338C6.33753 7.31414 5.68279 7.69294 5.00021 8.01592C4.907 7.51545 4.66445 7.05494 4.30449 6.69497C3.94452 6.33501 3.48401 6.09246 2.98354 5.99925C3.30675 5.31728 3.68571 4.66316 4.11654 4.04354C5.66021 1.89029 7.25979 0.984167 9.62479 0.916792C9.74416 0.916745 9.85883 0.963268 9.94443 1.04647C10.03 1.12966 10.0798 1.24297 10.0831 1.36229C10.0158 3.74013 9.10963 5.33971 6.95638 6.88338H6.95775Z" fill="#B4B6B8"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_1_4076">
-                                            <rect width="11" height="11" fill="white"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                        <span class="fs-14px">В ожидании</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>21.08.2025</div>
-                                    <div class="fs-14px archive-color-font">15:31</div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <img src="src/images/icons/favorite-icon.svg" alt="favorite">
-                                        <img src="src/images/icons/download-icon.svg" alt="favorite">
-                                        <img src="src/images/icons/chat-icon.svg" alt="favorite">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contracts-table-row">
-                                <div><input type="checkbox"></div>
-                                <div>ЭДО</div>
-                                <div>00000001</div>
-                                <div>21.08.2025<br><div class="fs-14px archive-color-font">15:31</div></div>
-                                <div>30.08.2025</div>
-                                <div>
-                                    <div class="fw-bold c070707">Марганов А.А.</div>
-                                    <div class="fs-14px archive-color-font">ТОО “Теміржол жөндеу”</div>
-                                    <div class="fw-bold c5A4DF5">Изучает договор</div>
-                                </div>
-                                <div>
-                                    <div class="fw-bold c070707">Договор на строительст...структуры № 7 8/2025</div>
-                                    <div>Каждая из сторон настоящего Договора обязуется выпол...</div>
-                                </div>
-                                <div>
-                                    <div>Исполнение</div>
-                                    <div class="status-signed">
-                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1_4076)">
-                                            <path d="M0.861001 8.19421C0.462788 8.74405 0.176982 9.36706 0.0199594 10.0275C-0.0100347 10.159 -0.00616993 10.296 0.031192 10.4256C0.068554 10.5552 0.138191 10.6732 0.233583 10.7685C0.328976 10.8639 0.447003 10.9335 0.576616 10.9708C0.706229 11.0081 0.843187 11.0118 0.974668 10.9818C1.63414 10.8245 2.25617 10.5389 2.80525 10.1412C3.06344 9.88339 3.20863 9.53356 3.20889 9.16868C3.20915 8.80381 3.06445 8.45377 2.80663 8.19558C2.5488 7.9374 2.19897 7.7922 1.8341 7.79194C1.46922 7.79169 1.11919 7.93639 0.861001 8.19421ZM2.15717 9.49083C1.78775 9.72744 1.38649 9.91016 0.965501 10.0335C1.08901 9.61257 1.27173 9.21134 1.50817 8.84183C1.59461 8.75835 1.71039 8.71215 1.83056 8.71319C1.95073 8.71424 2.06569 8.76244 2.15067 8.84742C2.23565 8.9324 2.28385 9.04735 2.28489 9.16753C2.28594 9.2877 2.23974 9.40347 2.15625 9.48992L2.15717 9.49083ZM8.24979 3.89596C8.24979 4.19985 8.12907 4.4913 7.91419 4.70619C7.6993 4.92107 7.40785 5.04179 7.10396 5.04179C6.80007 5.04179 6.50862 4.92107 6.29373 4.70619C6.07885 4.4913 5.95813 4.19985 5.95813 3.89596C5.95813 3.59207 6.07885 3.30062 6.29373 3.08573C6.50862 2.87085 6.80007 2.75013 7.10396 2.75013C7.40785 2.75013 7.6993 2.87085 7.91419 3.08573C8.12907 3.30062 8.24979 3.59207 8.24979 3.89596ZM9.61196 0.000125435C8.52124 -0.00635844 7.4437 0.238609 6.46298 0.71601C5.48227 1.19341 4.62476 1.8904 3.95704 2.75288C3.22881 2.77805 2.51456 2.95986 1.86292 3.28592C1.10723 3.6339 0.49032 4.22562 0.111168 4.96617C0.0221913 5.17277 -0.0139252 5.39828 0.00607972 5.62233C0.0260846 5.84639 0.101581 6.06193 0.225751 6.2495C0.351107 6.44167 0.522424 6.59952 0.724185 6.70876C0.925945 6.81801 1.15177 6.87519 1.38121 6.87513H2.52063C2.94545 6.87717 3.35228 7.04684 3.65268 7.34724C3.95308 7.64763 4.12274 8.05447 4.12479 8.47929V9.61871C4.12463 9.84806 4.18167 10.0738 4.29075 10.2756C4.39983 10.4773 4.55751 10.6487 4.7495 10.7742C4.93707 10.8983 5.15261 10.9738 5.37667 10.9938C5.60072 11.0138 5.82623 10.9777 6.03283 10.8888C6.77338 10.5096 7.3651 9.89269 7.71308 9.137C8.03914 8.48536 8.22095 7.77111 8.24613 7.04288C9.10997 6.37345 9.80781 5.51384 10.2854 4.53084C10.763 3.54785 11.0074 2.46797 10.9998 1.37513C10.9993 1.19363 10.9629 1.01402 10.8928 0.846607C10.8227 0.67919 10.7203 0.527256 10.5913 0.399515C10.4624 0.271774 10.3095 0.170739 10.1414 0.102204C9.97339 0.0336676 9.79345 -0.00102141 9.61196 0.000125435ZM1.99171 5.95846H1.38121C1.3037 5.95905 1.22731 5.93998 1.15918 5.90303C1.09105 5.86608 1.0334 5.81245 0.991626 5.74717C0.950588 5.68653 0.925504 5.61652 0.918694 5.54362C0.911884 5.47072 0.923569 5.39727 0.952668 5.33008C1.24799 4.78885 1.71196 4.35884 2.27404 4.10542C2.56446 3.9598 2.87107 3.84903 3.1875 3.77542C2.73193 4.47041 2.33209 5.20037 1.99171 5.95846ZM6.89588 8.72588C6.64246 9.28781 6.21265 9.75174 5.67167 10.0473C5.60441 10.0764 5.53089 10.0881 5.4579 10.0813C5.38492 10.0745 5.31483 10.0494 5.25413 10.0083C5.18884 9.96652 5.13521 9.90887 5.09826 9.84074C5.06131 9.7726 5.04224 9.69621 5.04283 9.61871V9.00821C5.80092 8.66783 6.53088 8.26799 7.22588 7.81242C7.15182 8.1289 7.04059 8.43552 6.8945 8.72588H6.89588ZM6.95775 6.88338C6.33753 7.31414 5.68279 7.69294 5.00021 8.01592C4.907 7.51545 4.66445 7.05494 4.30449 6.69497C3.94452 6.33501 3.48401 6.09246 2.98354 5.99925C3.30675 5.31728 3.68571 4.66316 4.11654 4.04354C5.66021 1.89029 7.25979 0.984167 9.62479 0.916792C9.74416 0.916745 9.85883 0.963268 9.94443 1.04647C10.03 1.12966 10.0798 1.24297 10.0831 1.36229C10.0158 3.74013 9.10963 5.33971 6.95638 6.88338H6.95775Z" fill="#B4B6B8"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_1_4076">
-                                            <rect width="11" height="11" fill="white"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                        <span class="fs-14px">Подписан</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>21.08.2025</div>
-                                    <div class="fs-14px archive-color-font">15:31</div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <img src="src/images/icons/favorite-icon.svg" alt="favorite">
-                                        <img src="src/images/icons/download-icon.svg" alt="favorite">
-                                        <img src="src/images/icons/chat-icon.svg" alt="favorite">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contracts-table-row">
-                                <div><input type="checkbox"></div>
-                                <div>ЭДО</div>
-                                <div>00000001</div>
-                                <div>21.08.2025<br><div class="fs-14px archive-color-font">15:31</div></div>
-                                <div>30.08.2025</div>
-                                <div>
-                                    <div class="fw-bold c070707">Марганов А.А.</div>
-                                    <div class="fs-14px archive-color-font">ТОО “Теміржол жөндеу”</div>
-                                    <div class="fw-bold c5A4DF5">Изучает договор</div>
-                                </div>
-                                <div>
-                                    <div class="fw-bold c070707">Договор на строительст...структуры № 7 8/2025</div>
-                                    <div>Каждая из сторон настоящего Договора обязуется выпол...</div>
-                                </div>
-                                <div>
-                                    <div>Исполнение</div>
-                                    <div class="status-rejected ">
-                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1_4076)">
-                                            <path d="M0.861001 8.19421C0.462788 8.74405 0.176982 9.36706 0.0199594 10.0275C-0.0100347 10.159 -0.00616993 10.296 0.031192 10.4256C0.068554 10.5552 0.138191 10.6732 0.233583 10.7685C0.328976 10.8639 0.447003 10.9335 0.576616 10.9708C0.706229 11.0081 0.843187 11.0118 0.974668 10.9818C1.63414 10.8245 2.25617 10.5389 2.80525 10.1412C3.06344 9.88339 3.20863 9.53356 3.20889 9.16868C3.20915 8.80381 3.06445 8.45377 2.80663 8.19558C2.5488 7.9374 2.19897 7.7922 1.8341 7.79194C1.46922 7.79169 1.11919 7.93639 0.861001 8.19421ZM2.15717 9.49083C1.78775 9.72744 1.38649 9.91016 0.965501 10.0335C1.08901 9.61257 1.27173 9.21134 1.50817 8.84183C1.59461 8.75835 1.71039 8.71215 1.83056 8.71319C1.95073 8.71424 2.06569 8.76244 2.15067 8.84742C2.23565 8.9324 2.28385 9.04735 2.28489 9.16753C2.28594 9.2877 2.23974 9.40347 2.15625 9.48992L2.15717 9.49083ZM8.24979 3.89596C8.24979 4.19985 8.12907 4.4913 7.91419 4.70619C7.6993 4.92107 7.40785 5.04179 7.10396 5.04179C6.80007 5.04179 6.50862 4.92107 6.29373 4.70619C6.07885 4.4913 5.95813 4.19985 5.95813 3.89596C5.95813 3.59207 6.07885 3.30062 6.29373 3.08573C6.50862 2.87085 6.80007 2.75013 7.10396 2.75013C7.40785 2.75013 7.6993 2.87085 7.91419 3.08573C8.12907 3.30062 8.24979 3.59207 8.24979 3.89596ZM9.61196 0.000125435C8.52124 -0.00635844 7.4437 0.238609 6.46298 0.71601C5.48227 1.19341 4.62476 1.8904 3.95704 2.75288C3.22881 2.77805 2.51456 2.95986 1.86292 3.28592C1.10723 3.6339 0.49032 4.22562 0.111168 4.96617C0.0221913 5.17277 -0.0139252 5.39828 0.00607972 5.62233C0.0260846 5.84639 0.101581 6.06193 0.225751 6.2495C0.351107 6.44167 0.522424 6.59952 0.724185 6.70876C0.925945 6.81801 1.15177 6.87519 1.38121 6.87513H2.52063C2.94545 6.87717 3.35228 7.04684 3.65268 7.34724C3.95308 7.64763 4.12274 8.05447 4.12479 8.47929V9.61871C4.12463 9.84806 4.18167 10.0738 4.29075 10.2756C4.39983 10.4773 4.55751 10.6487 4.7495 10.7742C4.93707 10.8983 5.15261 10.9738 5.37667 10.9938C5.60072 11.0138 5.82623 10.9777 6.03283 10.8888C6.77338 10.5096 7.3651 9.89269 7.71308 9.137C8.03914 8.48536 8.22095 7.77111 8.24613 7.04288C9.10997 6.37345 9.80781 5.51384 10.2854 4.53084C10.763 3.54785 11.0074 2.46797 10.9998 1.37513C10.9993 1.19363 10.9629 1.01402 10.8928 0.846607C10.8227 0.67919 10.7203 0.527256 10.5913 0.399515C10.4624 0.271774 10.3095 0.170739 10.1414 0.102204C9.97339 0.0336676 9.79345 -0.00102141 9.61196 0.000125435ZM1.99171 5.95846H1.38121C1.3037 5.95905 1.22731 5.93998 1.15918 5.90303C1.09105 5.86608 1.0334 5.81245 0.991626 5.74717C0.950588 5.68653 0.925504 5.61652 0.918694 5.54362C0.911884 5.47072 0.923569 5.39727 0.952668 5.33008C1.24799 4.78885 1.71196 4.35884 2.27404 4.10542C2.56446 3.9598 2.87107 3.84903 3.1875 3.77542C2.73193 4.47041 2.33209 5.20037 1.99171 5.95846ZM6.89588 8.72588C6.64246 9.28781 6.21265 9.75174 5.67167 10.0473C5.60441 10.0764 5.53089 10.0881 5.4579 10.0813C5.38492 10.0745 5.31483 10.0494 5.25413 10.0083C5.18884 9.96652 5.13521 9.90887 5.09826 9.84074C5.06131 9.7726 5.04224 9.69621 5.04283 9.61871V9.00821C5.80092 8.66783 6.53088 8.26799 7.22588 7.81242C7.15182 8.1289 7.04059 8.43552 6.8945 8.72588H6.89588ZM6.95775 6.88338C6.33753 7.31414 5.68279 7.69294 5.00021 8.01592C4.907 7.51545 4.66445 7.05494 4.30449 6.69497C3.94452 6.33501 3.48401 6.09246 2.98354 5.99925C3.30675 5.31728 3.68571 4.66316 4.11654 4.04354C5.66021 1.89029 7.25979 0.984167 9.62479 0.916792C9.74416 0.916745 9.85883 0.963268 9.94443 1.04647C10.03 1.12966 10.0798 1.24297 10.0831 1.36229C10.0158 3.74013 9.10963 5.33971 6.95638 6.88338H6.95775Z" fill="#B4B6B8"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_1_4076">
-                                            <rect width="11" height="11" fill="white"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                        <span class="fs-14px">Отклонен</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>21.08.2025</div>
-                                    <div class="fs-14px archive-color-font">15:31</div>
-                                    <div class="d-flex justify-content-between mt-2 position-relative">
-                                        <img src="src/images/icons/favorite-icon.svg" alt="favorite">
-                                        <img src="src/images/icons/download-icon.svg" alt="favorite">
-                                        <img src="src/images/icons/chat-icon.svg" alt="favorite">
-                                        <!-- if red dot needed -->
-                                        <img class="red-dot" src="src/images/icons/red-dot.svg" alt="online">   
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contracts-table-row">
-                                <div><input type="checkbox"></div>
-                                <div>ЭДО</div>
-                                <div>00000001</div>
-                                <div>21.08.2025<br><div class="fs-14px archive-color-font">15:31</div></div>
-                                <div>30.08.2025</div>
-                                <div>
-                                    <div class="fw-bold c070707">Марганов А.А.</div>
-                                    <div class="fs-14px archive-color-font">ТОО “Теміржол жөндеу”</div>
-                                    <div class="fw-bold c5A4DF5">Изучает договор</div>
-                                </div>
-                                <div>
-                                    <div class="fw-bold c070707">Договор на строительст...структуры № 7 8/2025</div>
-                                    <div>Каждая из сторон настоящего Договора обязуется выпол...</div>
-                                </div>
-                                <div>
-                                    <div>Исполнение</div>
-                                    <div class="status-unsend">
-                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1_4076)">
-                                            <path d="M0.861001 8.19421C0.462788 8.74405 0.176982 9.36706 0.0199594 10.0275C-0.0100347 10.159 -0.00616993 10.296 0.031192 10.4256C0.068554 10.5552 0.138191 10.6732 0.233583 10.7685C0.328976 10.8639 0.447003 10.9335 0.576616 10.9708C0.706229 11.0081 0.843187 11.0118 0.974668 10.9818C1.63414 10.8245 2.25617 10.5389 2.80525 10.1412C3.06344 9.88339 3.20863 9.53356 3.20889 9.16868C3.20915 8.80381 3.06445 8.45377 2.80663 8.19558C2.5488 7.9374 2.19897 7.7922 1.8341 7.79194C1.46922 7.79169 1.11919 7.93639 0.861001 8.19421ZM2.15717 9.49083C1.78775 9.72744 1.38649 9.91016 0.965501 10.0335C1.08901 9.61257 1.27173 9.21134 1.50817 8.84183C1.59461 8.75835 1.71039 8.71215 1.83056 8.71319C1.95073 8.71424 2.06569 8.76244 2.15067 8.84742C2.23565 8.9324 2.28385 9.04735 2.28489 9.16753C2.28594 9.2877 2.23974 9.40347 2.15625 9.48992L2.15717 9.49083ZM8.24979 3.89596C8.24979 4.19985 8.12907 4.4913 7.91419 4.70619C7.6993 4.92107 7.40785 5.04179 7.10396 5.04179C6.80007 5.04179 6.50862 4.92107 6.29373 4.70619C6.07885 4.4913 5.95813 4.19985 5.95813 3.89596C5.95813 3.59207 6.07885 3.30062 6.29373 3.08573C6.50862 2.87085 6.80007 2.75013 7.10396 2.75013C7.40785 2.75013 7.6993 2.87085 7.91419 3.08573C8.12907 3.30062 8.24979 3.59207 8.24979 3.89596ZM9.61196 0.000125435C8.52124 -0.00635844 7.4437 0.238609 6.46298 0.71601C5.48227 1.19341 4.62476 1.8904 3.95704 2.75288C3.22881 2.77805 2.51456 2.95986 1.86292 3.28592C1.10723 3.6339 0.49032 4.22562 0.111168 4.96617C0.0221913 5.17277 -0.0139252 5.39828 0.00607972 5.62233C0.0260846 5.84639 0.101581 6.06193 0.225751 6.2495C0.351107 6.44167 0.522424 6.59952 0.724185 6.70876C0.925945 6.81801 1.15177 6.87519 1.38121 6.87513H2.52063C2.94545 6.87717 3.35228 7.04684 3.65268 7.34724C3.95308 7.64763 4.12274 8.05447 4.12479 8.47929V9.61871C4.12463 9.84806 4.18167 10.0738 4.29075 10.2756C4.39983 10.4773 4.55751 10.6487 4.7495 10.7742C4.93707 10.8983 5.15261 10.9738 5.37667 10.9938C5.60072 11.0138 5.82623 10.9777 6.03283 10.8888C6.77338 10.5096 7.3651 9.89269 7.71308 9.137C8.03914 8.48536 8.22095 7.77111 8.24613 7.04288C9.10997 6.37345 9.80781 5.51384 10.2854 4.53084C10.763 3.54785 11.0074 2.46797 10.9998 1.37513C10.9993 1.19363 10.9629 1.01402 10.8928 0.846607C10.8227 0.67919 10.7203 0.527256 10.5913 0.399515C10.4624 0.271774 10.3095 0.170739 10.1414 0.102204C9.97339 0.0336676 9.79345 -0.00102141 9.61196 0.000125435ZM1.99171 5.95846H1.38121C1.3037 5.95905 1.22731 5.93998 1.15918 5.90303C1.09105 5.86608 1.0334 5.81245 0.991626 5.74717C0.950588 5.68653 0.925504 5.61652 0.918694 5.54362C0.911884 5.47072 0.923569 5.39727 0.952668 5.33008C1.24799 4.78885 1.71196 4.35884 2.27404 4.10542C2.56446 3.9598 2.87107 3.84903 3.1875 3.77542C2.73193 4.47041 2.33209 5.20037 1.99171 5.95846ZM6.89588 8.72588C6.64246 9.28781 6.21265 9.75174 5.67167 10.0473C5.60441 10.0764 5.53089 10.0881 5.4579 10.0813C5.38492 10.0745 5.31483 10.0494 5.25413 10.0083C5.18884 9.96652 5.13521 9.90887 5.09826 9.84074C5.06131 9.7726 5.04224 9.69621 5.04283 9.61871V9.00821C5.80092 8.66783 6.53088 8.26799 7.22588 7.81242C7.15182 8.1289 7.04059 8.43552 6.8945 8.72588H6.89588ZM6.95775 6.88338C6.33753 7.31414 5.68279 7.69294 5.00021 8.01592C4.907 7.51545 4.66445 7.05494 4.30449 6.69497C3.94452 6.33501 3.48401 6.09246 2.98354 5.99925C3.30675 5.31728 3.68571 4.66316 4.11654 4.04354C5.66021 1.89029 7.25979 0.984167 9.62479 0.916792C9.74416 0.916745 9.85883 0.963268 9.94443 1.04647C10.03 1.12966 10.0798 1.24297 10.0831 1.36229C10.0158 3.74013 9.10963 5.33971 6.95638 6.88338H6.95775Z" fill="#B4B6B8"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_1_4076">
-                                            <rect width="11" height="11" fill="white"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                        <span class="fs-14px">Не отправлено</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>21.08.2025</div>
-                                    <div class="fs-14px archive-color-font">15:31</div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <img src="src/images/icons/favorite-icon.svg" alt="favorite">
-                                        <img src="src/images/icons/download-icon.svg" alt="favorite">
-                                        <img src="src/images/icons/chat-icon.svg" alt="favorite">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <h5 class="fs-16px ms-4">ИИН/БИН: 211240024773</h5>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Form Sections -->
+                            <div class="d-flex section w-100 mt-4">
+                                <div class="w-100">
+                                    <div class="card-subtitle mb-3 d-flex align-items-center">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.375 7.58333C3.85582 7.58333 3.34831 7.42938 2.91663 7.14094C2.48495 6.8525 2.1485 6.44253 1.94982 5.96288C1.75114 5.48322 1.69915 4.95542 1.80044 4.44622C1.90172 3.93702 2.15173 3.46929 2.51884 3.10218C2.88596 2.73507 3.35369 2.48506 3.86289 2.38377C4.37209 2.28249 4.89989 2.33447 5.37954 2.53315C5.8592 2.73183 6.26917 3.06828 6.55761 3.49996C6.84605 3.93164 7 4.43916 7 4.95833C6.99923 5.65429 6.72242 6.32152 6.2303 6.81364C5.73819 7.30575 5.07096 7.58256 4.375 7.58333ZM4.375 3.5C4.08657 3.5 3.80462 3.58553 3.56479 3.74577C3.32497 3.90602 3.13805 4.13378 3.02768 4.40025C2.9173 4.66673 2.88842 4.95995 2.94469 5.24284C3.00096 5.52573 3.13985 5.78558 3.3438 5.98953C3.54775 6.19348 3.8076 6.33238 4.09049 6.38865C4.37338 6.44492 4.6666 6.41604 4.93308 6.30566C5.19956 6.19528 5.42732 6.00836 5.58756 5.76854C5.7478 5.52872 5.83333 5.24677 5.83333 4.95833C5.83333 4.57156 5.67969 4.20063 5.4062 3.92714C5.13271 3.65365 4.76177 3.5 4.375 3.5ZM8.75 13.4167V13.125C8.75 11.9647 8.28906 10.8519 7.46859 10.0314C6.64812 9.21094 5.53532 8.75 4.375 8.75C3.21468 8.75 2.10188 9.21094 1.28141 10.0314C0.460936 10.8519 0 11.9647 0 13.125L0 13.4167C0 13.5714 0.0614582 13.7198 0.170854 13.8291C0.280251 13.9385 0.428624 14 0.583333 14C0.738043 14 0.886416 13.9385 0.995812 13.8291C1.10521 13.7198 1.16667 13.5714 1.16667 13.4167V13.125C1.16667 12.2741 1.50469 11.458 2.10637 10.8564C2.70805 10.2547 3.5241 9.91667 4.375 9.91667C5.2259 9.91667 6.04195 10.2547 6.64363 10.8564C7.24531 11.458 7.58333 12.2741 7.58333 13.125V13.4167C7.58333 13.5714 7.64479 13.7198 7.75419 13.8291C7.86358 13.9385 8.01196 14 8.16667 14C8.32138 14 8.46975 13.9385 8.57915 13.8291C8.68854 13.7198 8.75 13.5714 8.75 13.4167ZM14 10.5C14 9.71173 13.7718 8.94032 13.343 8.27888C12.9142 7.61744 12.3031 7.09426 11.5835 6.77248C10.8639 6.4507 10.0665 6.34409 9.28769 6.46551C8.50883 6.58694 7.78176 6.9312 7.19425 7.45675C7.13636 7.50762 7.08913 7.56945 7.05528 7.63867C7.02142 7.7079 7.00162 7.78315 6.99701 7.86007C6.99241 7.93699 7.00309 8.01406 7.02843 8.08683C7.05378 8.1596 7.0933 8.22663 7.1447 8.28404C7.1961 8.34145 7.25837 8.38811 7.3279 8.42132C7.39744 8.45453 7.47287 8.47364 7.54983 8.47753C7.62679 8.48142 7.70376 8.47003 7.77629 8.44401C7.84883 8.41798 7.91548 8.37785 7.97242 8.32592C8.3921 7.95061 8.91143 7.70479 9.46774 7.61814C10.024 7.53148 10.5935 7.60768 11.1075 7.83755C11.6214 8.06742 12.0579 8.44113 12.3641 8.91357C12.6704 9.38601 12.8333 9.93699 12.8333 10.5C12.8333 10.6547 12.8948 10.8031 13.0042 10.9125C13.1136 11.0219 13.262 11.0833 13.4167 11.0833C13.5714 11.0833 13.7197 11.0219 13.8291 10.9125C13.9385 10.8031 14 10.6547 14 10.5ZM10.2083 5.25C9.68916 5.25 9.18164 5.09605 8.74996 4.80761C8.31828 4.51917 7.98183 4.1092 7.78315 3.62954C7.58447 3.14989 7.53249 2.62209 7.63377 2.11289C7.73506 1.60369 7.98506 1.13596 8.35218 0.768846C8.71929 0.401733 9.18702 0.151726 9.69622 0.0504398C10.2054 -0.0508464 10.7332 0.00113738 11.2129 0.199817C11.6925 0.398497 12.1025 0.73495 12.3909 1.16663C12.6794 1.59831 12.8333 2.10583 12.8333 2.625C12.8326 3.32096 12.5558 3.98819 12.0636 4.4803C11.5715 4.97242 10.9043 5.24923 10.2083 5.25ZM10.2083 1.16667C9.9199 1.16667 9.63795 1.2522 9.39813 1.41244C9.15831 1.57268 8.97139 1.80045 8.86101 2.06692C8.75063 2.3334 8.72175 2.62662 8.77802 2.90951C8.83429 3.1924 8.97318 3.45225 9.17714 3.6562C9.38109 3.86015 9.64094 3.99904 9.92383 4.05531C10.2067 4.11158 10.4999 4.0827 10.7664 3.97233C11.0329 3.86195 11.2606 3.67503 11.4209 3.43521C11.5811 3.19539 11.6667 2.91343 11.6667 2.625C11.6667 2.23823 11.513 1.86729 11.2395 1.5938C10.966 1.32031 10.5951 1.16667 10.2083 1.16667Z" fill="black"/>
+                                        </svg>
 
-                        </div>
+                                        <span class="ms-2">Подключенные аккаунты: 6</span>
+                                    </div>
+                                            
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle">
+                                            <tbody>
+                                            <tr>
+                                                <td style="width: 40px;">1</td>
+                                                <td style="width: 35%;">Директор</td>
+                                                <td>
+                                                <div>Турагалиев А.Е.</div>
+                                                <div class="text-muted small">ТУРАГАЛИЕВ АРМАН ЕРЖАНОВИЧ</div>
+                                                </td>
+                                                <td class="text-end">
+                                                <span class="badge text-primary rounded-pill">
+                                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 11C4.75475 11 4.05167 10.6728 3.57133 10.1021C2.8655 10.1828 2.13813 9.9165 1.61104 9.38942C1.08442 8.86233 0.818583 8.13358 0.882292 7.39017C0.32725 6.94833 0 6.24525 0 5.5C0 4.75475 0.32725 4.05167 0.898333 3.57133C0.818125 2.86688 1.08396 2.13813 1.61104 1.61104C2.13813 1.08396 2.8655 0.81675 3.60983 0.882292C4.05167 0.327708 4.75475 0 5.5 0C6.24525 0 6.94833 0.32725 7.42867 0.897875C8.13542 0.818583 8.86188 1.0835 9.38896 1.61058C9.91558 2.13767 10.1814 2.86642 10.1177 3.60983C10.6728 4.05167 11 4.75475 11 5.5C11 6.24525 10.6728 6.94833 10.1017 7.42867C10.1819 8.13313 9.91604 8.86188 9.38896 9.38896C8.86142 9.91604 8.13267 10.18 7.39017 10.1177C6.94833 10.6723 6.24525 11 5.5 11ZM3.60846 9.2015C3.86558 9.2015 4.10392 9.31196 4.27213 9.51133C4.57829 9.87479 5.02563 10.0833 5.5 10.0833C5.97438 10.0833 6.42171 9.87479 6.72788 9.51133C6.91258 9.29179 7.18163 9.18088 7.46854 9.20425C7.94246 9.24413 8.40538 9.07592 8.74088 8.74042C9.07592 8.40537 9.24504 7.94154 9.20471 7.46808C9.17996 7.18208 9.29179 6.91213 9.51179 6.72696C9.87479 6.42125 10.0833 5.97346 10.0833 5.49954C10.0833 5.02563 9.87479 4.57783 9.51179 4.27213C9.29225 4.08742 9.17996 3.817 9.20471 3.531C9.24504 3.05754 9.07638 2.59371 8.74088 2.25867C8.40538 1.92362 7.93971 1.75725 7.469 1.79483C7.18208 1.8205 6.91258 1.70729 6.72788 1.48821C6.42171 1.12475 5.97438 0.916208 5.5 0.916208C5.02563 0.916208 4.57829 1.12475 4.27213 1.48821C4.08696 1.70775 3.817 1.81775 3.53146 1.79529C3.05525 1.75404 2.59462 1.92362 2.25912 2.25912C1.92408 2.59417 1.75496 3.058 1.79529 3.53146C1.82004 3.81746 1.70821 4.08742 1.48821 4.27258C1.12521 4.57829 0.916667 5.02608 0.916667 5.5C0.916667 5.97392 1.12521 6.42171 1.48821 6.72742C1.70775 6.91213 1.82004 7.18254 1.79529 7.46854C1.75496 7.942 1.92362 8.40583 2.25912 8.74088C2.59462 9.07592 3.06258 9.24275 3.531 9.20471C3.55713 9.20242 3.58279 9.2015 3.60846 9.2015ZM5.86713 6.93688L8.03917 4.84321C8.22113 4.66767 8.22663 4.37708 8.05063 4.19513C7.87508 4.01317 7.58496 4.00767 7.40254 4.18321L5.22454 6.28283C5.04533 6.46204 4.75612 6.46204 4.56454 6.27138L3.52046 5.30108C3.33621 5.12921 3.04563 5.13929 2.87283 5.32492C2.7005 5.51008 2.71104 5.80021 2.89667 5.97254L3.92883 6.93138C4.19742 7.19996 4.55079 7.33425 4.90325 7.33425C5.25388 7.33425 5.60267 7.20179 5.86758 6.93733L5.86713 6.93688Z" fill="#2F81FF"/>
+                                                    </svg>
+                                                    <span class="ms-1">ЭЦП подтвержден</span>
+                                                </span>
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Зам. Директор</td>
+                                                <td>
+                                                <div>Турагалиев А.Е.</div>
+                                                <div class="text-muted small">ТУРАГАЛИЕВ АРМАН ЕРЖАНОВИЧ</div>
+                                                </td>
+                                                <td class="text-end">
+                                                <span class="badge text-primary rounded-pill">
+                                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 11C4.75475 11 4.05167 10.6728 3.57133 10.1021C2.8655 10.1828 2.13813 9.9165 1.61104 9.38942C1.08442 8.86233 0.818583 8.13358 0.882292 7.39017C0.32725 6.94833 0 6.24525 0 5.5C0 4.75475 0.32725 4.05167 0.898333 3.57133C0.818125 2.86688 1.08396 2.13813 1.61104 1.61104C2.13813 1.08396 2.8655 0.81675 3.60983 0.882292C4.05167 0.327708 4.75475 0 5.5 0C6.24525 0 6.94833 0.32725 7.42867 0.897875C8.13542 0.818583 8.86188 1.0835 9.38896 1.61058C9.91558 2.13767 10.1814 2.86642 10.1177 3.60983C10.6728 4.05167 11 4.75475 11 5.5C11 6.24525 10.6728 6.94833 10.1017 7.42867C10.1819 8.13313 9.91604 8.86188 9.38896 9.38896C8.86142 9.91604 8.13267 10.18 7.39017 10.1177C6.94833 10.6723 6.24525 11 5.5 11ZM3.60846 9.2015C3.86558 9.2015 4.10392 9.31196 4.27213 9.51133C4.57829 9.87479 5.02563 10.0833 5.5 10.0833C5.97438 10.0833 6.42171 9.87479 6.72788 9.51133C6.91258 9.29179 7.18163 9.18088 7.46854 9.20425C7.94246 9.24413 8.40538 9.07592 8.74088 8.74042C9.07592 8.40537 9.24504 7.94154 9.20471 7.46808C9.17996 7.18208 9.29179 6.91213 9.51179 6.72696C9.87479 6.42125 10.0833 5.97346 10.0833 5.49954C10.0833 5.02563 9.87479 4.57783 9.51179 4.27213C9.29225 4.08742 9.17996 3.817 9.20471 3.531C9.24504 3.05754 9.07638 2.59371 8.74088 2.25867C8.40538 1.92362 7.93971 1.75725 7.469 1.79483C7.18208 1.8205 6.91258 1.70729 6.72788 1.48821C6.42171 1.12475 5.97438 0.916208 5.5 0.916208C5.02563 0.916208 4.57829 1.12475 4.27213 1.48821C4.08696 1.70775 3.817 1.81775 3.53146 1.79529C3.05525 1.75404 2.59462 1.92362 2.25912 2.25912C1.92408 2.59417 1.75496 3.058 1.79529 3.53146C1.82004 3.81746 1.70821 4.08742 1.48821 4.27258C1.12521 4.57829 0.916667 5.02608 0.916667 5.5C0.916667 5.97392 1.12521 6.42171 1.48821 6.72742C1.70775 6.91213 1.82004 7.18254 1.79529 7.46854C1.75496 7.942 1.92362 8.40583 2.25912 8.74088C2.59462 9.07592 3.06258 9.24275 3.531 9.20471C3.55713 9.20242 3.58279 9.2015 3.60846 9.2015ZM5.86713 6.93688L8.03917 4.84321C8.22113 4.66767 8.22663 4.37708 8.05063 4.19513C7.87508 4.01317 7.58496 4.00767 7.40254 4.18321L5.22454 6.28283C5.04533 6.46204 4.75612 6.46204 4.56454 6.27138L3.52046 5.30108C3.33621 5.12921 3.04563 5.13929 2.87283 5.32492C2.7005 5.51008 2.71104 5.80021 2.89667 5.97254L3.92883 6.93138C4.19742 7.19996 4.55079 7.33425 4.90325 7.33425C5.25388 7.33425 5.60267 7.20179 5.86758 6.93733L5.86713 6.93688Z" fill="#2F81FF"/>
+                                                    </svg>
+                                                    <span class="ms-1">ЭЦП подтвержден</span>
+                                                </span>
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Заместитель Директор по торговым отношениям в CIS</td>
+                                                <td>
+                                                <div>Турагалиев А.Е.</div>
+                                                <div class="text-muted small">ТУРАГАЛИЕВ АРМАН ЕРЖАНОВИЧ</div>
+                                                </td>
+                                                <td class="text-end">
+                                                <span class="badge text-primary rounded-pill">
+                                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 11C4.75475 11 4.05167 10.6728 3.57133 10.1021C2.8655 10.1828 2.13813 9.9165 1.61104 9.38942C1.08442 8.86233 0.818583 8.13358 0.882292 7.39017C0.32725 6.94833 0 6.24525 0 5.5C0 4.75475 0.32725 4.05167 0.898333 3.57133C0.818125 2.86688 1.08396 2.13813 1.61104 1.61104C2.13813 1.08396 2.8655 0.81675 3.60983 0.882292C4.05167 0.327708 4.75475 0 5.5 0C6.24525 0 6.94833 0.32725 7.42867 0.897875C8.13542 0.818583 8.86188 1.0835 9.38896 1.61058C9.91558 2.13767 10.1814 2.86642 10.1177 3.60983C10.6728 4.05167 11 4.75475 11 5.5C11 6.24525 10.6728 6.94833 10.1017 7.42867C10.1819 8.13313 9.91604 8.86188 9.38896 9.38896C8.86142 9.91604 8.13267 10.18 7.39017 10.1177C6.94833 10.6723 6.24525 11 5.5 11ZM3.60846 9.2015C3.86558 9.2015 4.10392 9.31196 4.27213 9.51133C4.57829 9.87479 5.02563 10.0833 5.5 10.0833C5.97438 10.0833 6.42171 9.87479 6.72788 9.51133C6.91258 9.29179 7.18163 9.18088 7.46854 9.20425C7.94246 9.24413 8.40538 9.07592 8.74088 8.74042C9.07592 8.40537 9.24504 7.94154 9.20471 7.46808C9.17996 7.18208 9.29179 6.91213 9.51179 6.72696C9.87479 6.42125 10.0833 5.97346 10.0833 5.49954C10.0833 5.02563 9.87479 4.57783 9.51179 4.27213C9.29225 4.08742 9.17996 3.817 9.20471 3.531C9.24504 3.05754 9.07638 2.59371 8.74088 2.25867C8.40538 1.92362 7.93971 1.75725 7.469 1.79483C7.18208 1.8205 6.91258 1.70729 6.72788 1.48821C6.42171 1.12475 5.97438 0.916208 5.5 0.916208C5.02563 0.916208 4.57829 1.12475 4.27213 1.48821C4.08696 1.70775 3.817 1.81775 3.53146 1.79529C3.05525 1.75404 2.59462 1.92362 2.25912 2.25912C1.92408 2.59417 1.75496 3.058 1.79529 3.53146C1.82004 3.81746 1.70821 4.08742 1.48821 4.27258C1.12521 4.57829 0.916667 5.02608 0.916667 5.5C0.916667 5.97392 1.12521 6.42171 1.48821 6.72742C1.70775 6.91213 1.82004 7.18254 1.79529 7.46854C1.75496 7.942 1.92362 8.40583 2.25912 8.74088C2.59462 9.07592 3.06258 9.24275 3.531 9.20471C3.55713 9.20242 3.58279 9.2015 3.60846 9.2015ZM5.86713 6.93688L8.03917 4.84321C8.22113 4.66767 8.22663 4.37708 8.05063 4.19513C7.87508 4.01317 7.58496 4.00767 7.40254 4.18321L5.22454 6.28283C5.04533 6.46204 4.75612 6.46204 4.56454 6.27138L3.52046 5.30108C3.33621 5.12921 3.04563 5.13929 2.87283 5.32492C2.7005 5.51008 2.71104 5.80021 2.89667 5.97254L3.92883 6.93138C4.19742 7.19996 4.55079 7.33425 4.90325 7.33425C5.25388 7.33425 5.60267 7.20179 5.86758 6.93733L5.86713 6.93688Z" fill="#2F81FF"/>
+                                                    </svg>
+                                                    <span class="ms-1">ЭЦП подтвержден</span>
+                                                </span>
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Директор</td>
+                                                <td>
+                                                <div>Турагалиев А.Е.</div>
+                                                <div class="text-muted small">ТУРАГАЛИЕВ АРМАН ЕРЖАНОВИЧ</div>
+                                                </td>
+                                                <td class="text-end">
+                                                <span class="badge text-primary rounded-pill">
+                                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 11C4.75475 11 4.05167 10.6728 3.57133 10.1021C2.8655 10.1828 2.13813 9.9165 1.61104 9.38942C1.08442 8.86233 0.818583 8.13358 0.882292 7.39017C0.32725 6.94833 0 6.24525 0 5.5C0 4.75475 0.32725 4.05167 0.898333 3.57133C0.818125 2.86688 1.08396 2.13813 1.61104 1.61104C2.13813 1.08396 2.8655 0.81675 3.60983 0.882292C4.05167 0.327708 4.75475 0 5.5 0C6.24525 0 6.94833 0.32725 7.42867 0.897875C8.13542 0.818583 8.86188 1.0835 9.38896 1.61058C9.91558 2.13767 10.1814 2.86642 10.1177 3.60983C10.6728 4.05167 11 4.75475 11 5.5C11 6.24525 10.6728 6.94833 10.1017 7.42867C10.1819 8.13313 9.91604 8.86188 9.38896 9.38896C8.86142 9.91604 8.13267 10.18 7.39017 10.1177C6.94833 10.6723 6.24525 11 5.5 11ZM3.60846 9.2015C3.86558 9.2015 4.10392 9.31196 4.27213 9.51133C4.57829 9.87479 5.02563 10.0833 5.5 10.0833C5.97438 10.0833 6.42171 9.87479 6.72788 9.51133C6.91258 9.29179 7.18163 9.18088 7.46854 9.20425C7.94246 9.24413 8.40538 9.07592 8.74088 8.74042C9.07592 8.40537 9.24504 7.94154 9.20471 7.46808C9.17996 7.18208 9.29179 6.91213 9.51179 6.72696C9.87479 6.42125 10.0833 5.97346 10.0833 5.49954C10.0833 5.02563 9.87479 4.57783 9.51179 4.27213C9.29225 4.08742 9.17996 3.817 9.20471 3.531C9.24504 3.05754 9.07638 2.59371 8.74088 2.25867C8.40538 1.92362 7.93971 1.75725 7.469 1.79483C7.18208 1.8205 6.91258 1.70729 6.72788 1.48821C6.42171 1.12475 5.97438 0.916208 5.5 0.916208C5.02563 0.916208 4.57829 1.12475 4.27213 1.48821C4.08696 1.70775 3.817 1.81775 3.53146 1.79529C3.05525 1.75404 2.59462 1.92362 2.25912 2.25912C1.92408 2.59417 1.75496 3.058 1.79529 3.53146C1.82004 3.81746 1.70821 4.08742 1.48821 4.27258C1.12521 4.57829 0.916667 5.02608 0.916667 5.5C0.916667 5.97392 1.12521 6.42171 1.48821 6.72742C1.70775 6.91213 1.82004 7.18254 1.79529 7.46854C1.75496 7.942 1.92362 8.40583 2.25912 8.74088C2.59462 9.07592 3.06258 9.24275 3.531 9.20471C3.55713 9.20242 3.58279 9.2015 3.60846 9.2015ZM5.86713 6.93688L8.03917 4.84321C8.22113 4.66767 8.22663 4.37708 8.05063 4.19513C7.87508 4.01317 7.58496 4.00767 7.40254 4.18321L5.22454 6.28283C5.04533 6.46204 4.75612 6.46204 4.56454 6.27138L3.52046 5.30108C3.33621 5.12921 3.04563 5.13929 2.87283 5.32492C2.7005 5.51008 2.71104 5.80021 2.89667 5.97254L3.92883 6.93138C4.19742 7.19996 4.55079 7.33425 4.90325 7.33425C5.25388 7.33425 5.60267 7.20179 5.86758 6.93733L5.86713 6.93688Z" fill="#2F81FF"/>
+                                                    </svg>
+                                                    <span class="ms-1">ЭЦП подтвержден</span>
+                                                </span>
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Зам. Директор</td>
+                                                <td>
+                                                <div>Турагалиев А.Е.</div>
+                                                <div class="text-muted small">ТУРАГАЛИЕВ АРМАН ЕРЖАНОВИЧ</div>
+                                                </td>
+                                                <td class="text-end">
+                                                <span class="badge text-primary rounded-pill">
+                                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 11C4.75475 11 4.05167 10.6728 3.57133 10.1021C2.8655 10.1828 2.13813 9.9165 1.61104 9.38942C1.08442 8.86233 0.818583 8.13358 0.882292 7.39017C0.32725 6.94833 0 6.24525 0 5.5C0 4.75475 0.32725 4.05167 0.898333 3.57133C0.818125 2.86688 1.08396 2.13813 1.61104 1.61104C2.13813 1.08396 2.8655 0.81675 3.60983 0.882292C4.05167 0.327708 4.75475 0 5.5 0C6.24525 0 6.94833 0.32725 7.42867 0.897875C8.13542 0.818583 8.86188 1.0835 9.38896 1.61058C9.91558 2.13767 10.1814 2.86642 10.1177 3.60983C10.6728 4.05167 11 4.75475 11 5.5C11 6.24525 10.6728 6.94833 10.1017 7.42867C10.1819 8.13313 9.91604 8.86188 9.38896 9.38896C8.86142 9.91604 8.13267 10.18 7.39017 10.1177C6.94833 10.6723 6.24525 11 5.5 11ZM3.60846 9.2015C3.86558 9.2015 4.10392 9.31196 4.27213 9.51133C4.57829 9.87479 5.02563 10.0833 5.5 10.0833C5.97438 10.0833 6.42171 9.87479 6.72788 9.51133C6.91258 9.29179 7.18163 9.18088 7.46854 9.20425C7.94246 9.24413 8.40538 9.07592 8.74088 8.74042C9.07592 8.40537 9.24504 7.94154 9.20471 7.46808C9.17996 7.18208 9.29179 6.91213 9.51179 6.72696C9.87479 6.42125 10.0833 5.97346 10.0833 5.49954C10.0833 5.02563 9.87479 4.57783 9.51179 4.27213C9.29225 4.08742 9.17996 3.817 9.20471 3.531C9.24504 3.05754 9.07638 2.59371 8.74088 2.25867C8.40538 1.92362 7.93971 1.75725 7.469 1.79483C7.18208 1.8205 6.91258 1.70729 6.72788 1.48821C6.42171 1.12475 5.97438 0.916208 5.5 0.916208C5.02563 0.916208 4.57829 1.12475 4.27213 1.48821C4.08696 1.70775 3.817 1.81775 3.53146 1.79529C3.05525 1.75404 2.59462 1.92362 2.25912 2.25912C1.92408 2.59417 1.75496 3.058 1.79529 3.53146C1.82004 3.81746 1.70821 4.08742 1.48821 4.27258C1.12521 4.57829 0.916667 5.02608 0.916667 5.5C0.916667 5.97392 1.12521 6.42171 1.48821 6.72742C1.70775 6.91213 1.82004 7.18254 1.79529 7.46854C1.75496 7.942 1.92362 8.40583 2.25912 8.74088C2.59462 9.07592 3.06258 9.24275 3.531 9.20471C3.55713 9.20242 3.58279 9.2015 3.60846 9.2015ZM5.86713 6.93688L8.03917 4.84321C8.22113 4.66767 8.22663 4.37708 8.05063 4.19513C7.87508 4.01317 7.58496 4.00767 7.40254 4.18321L5.22454 6.28283C5.04533 6.46204 4.75612 6.46204 4.56454 6.27138L3.52046 5.30108C3.33621 5.12921 3.04563 5.13929 2.87283 5.32492C2.7005 5.51008 2.71104 5.80021 2.89667 5.97254L3.92883 6.93138C4.19742 7.19996 4.55079 7.33425 4.90325 7.33425C5.25388 7.33425 5.60267 7.20179 5.86758 6.93733L5.86713 6.93688Z" fill="#2F81FF"/>
+                                                    </svg>
+                                                    <span class="ms-1">ЭЦП подтвержден</span>
+                                                </span>
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Заместитель Директор по торговым отношениям в CIS</td>
+                                                <td>
+                                                <div>Турагалиев А.Е.</div>
+                                                <div class="text-muted small">ТУРАГАЛИЕВ АРМАН ЕРЖАНОВИЧ</div>
+                                                </td>
+                                                <td class="text-end">
+                                                <span class="badge text-primary rounded-pill">
+                                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 11C4.75475 11 4.05167 10.6728 3.57133 10.1021C2.8655 10.1828 2.13813 9.9165 1.61104 9.38942C1.08442 8.86233 0.818583 8.13358 0.882292 7.39017C0.32725 6.94833 0 6.24525 0 5.5C0 4.75475 0.32725 4.05167 0.898333 3.57133C0.818125 2.86688 1.08396 2.13813 1.61104 1.61104C2.13813 1.08396 2.8655 0.81675 3.60983 0.882292C4.05167 0.327708 4.75475 0 5.5 0C6.24525 0 6.94833 0.32725 7.42867 0.897875C8.13542 0.818583 8.86188 1.0835 9.38896 1.61058C9.91558 2.13767 10.1814 2.86642 10.1177 3.60983C10.6728 4.05167 11 4.75475 11 5.5C11 6.24525 10.6728 6.94833 10.1017 7.42867C10.1819 8.13313 9.91604 8.86188 9.38896 9.38896C8.86142 9.91604 8.13267 10.18 7.39017 10.1177C6.94833 10.6723 6.24525 11 5.5 11ZM3.60846 9.2015C3.86558 9.2015 4.10392 9.31196 4.27213 9.51133C4.57829 9.87479 5.02563 10.0833 5.5 10.0833C5.97438 10.0833 6.42171 9.87479 6.72788 9.51133C6.91258 9.29179 7.18163 9.18088 7.46854 9.20425C7.94246 9.24413 8.40538 9.07592 8.74088 8.74042C9.07592 8.40537 9.24504 7.94154 9.20471 7.46808C9.17996 7.18208 9.29179 6.91213 9.51179 6.72696C9.87479 6.42125 10.0833 5.97346 10.0833 5.49954C10.0833 5.02563 9.87479 4.57783 9.51179 4.27213C9.29225 4.08742 9.17996 3.817 9.20471 3.531C9.24504 3.05754 9.07638 2.59371 8.74088 2.25867C8.40538 1.92362 7.93971 1.75725 7.469 1.79483C7.18208 1.8205 6.91258 1.70729 6.72788 1.48821C6.42171 1.12475 5.97438 0.916208 5.5 0.916208C5.02563 0.916208 4.57829 1.12475 4.27213 1.48821C4.08696 1.70775 3.817 1.81775 3.53146 1.79529C3.05525 1.75404 2.59462 1.92362 2.25912 2.25912C1.92408 2.59417 1.75496 3.058 1.79529 3.53146C1.82004 3.81746 1.70821 4.08742 1.48821 4.27258C1.12521 4.57829 0.916667 5.02608 0.916667 5.5C0.916667 5.97392 1.12521 6.42171 1.48821 6.72742C1.70775 6.91213 1.82004 7.18254 1.79529 7.46854C1.75496 7.942 1.92362 8.40583 2.25912 8.74088C2.59462 9.07592 3.06258 9.24275 3.531 9.20471C3.55713 9.20242 3.58279 9.2015 3.60846 9.2015ZM5.86713 6.93688L8.03917 4.84321C8.22113 4.66767 8.22663 4.37708 8.05063 4.19513C7.87508 4.01317 7.58496 4.00767 7.40254 4.18321L5.22454 6.28283C5.04533 6.46204 4.75612 6.46204 4.56454 6.27138L3.52046 5.30108C3.33621 5.12921 3.04563 5.13929 2.87283 5.32492C2.7005 5.51008 2.71104 5.80021 2.89667 5.97254L3.92883 6.93138C4.19742 7.19996 4.55079 7.33425 4.90325 7.33425C5.25388 7.33425 5.60267 7.20179 5.86758 6.93733L5.86713 6.93688Z" fill="#2F81FF"/>
+                                                    </svg>
+                                                    <span class="ms-1">ЭЦП подтвержден</span>
+                                                </span>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                        </div>                                                  
                     </div>
                 </div>
             </div>
         </main>
+        <nav id="mobile-footer" class="d-flex d-lg-none align-items-center">
+            <div class="active">
+                <div>
+                    <svg width="26" height="26" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3407 6.78979L11.652 1.09688C10.9479 0.394448 9.99425 0 9 0C8.00575 0 7.05207 0.394448 6.348 1.09688L0.659258 6.78979C0.449578 6.99825 0.283336 7.24628 0.170171 7.51951C0.0570054 7.79274 -0.000832799 8.08573 9.0596e-06 8.38149V15.7487C9.0596e-06 16.3457 0.237062 16.9184 0.659018 17.3406C1.08097 17.7628 1.65327 18 2.25001 18H15.75C16.3467 18 16.919 17.7628 17.341 17.3406C17.7629 16.9184 18 16.3457 18 15.7487V8.38149C18.0008 8.08573 17.943 7.79274 17.8298 7.51951C17.7167 7.24628 17.5504 6.99825 17.3407 6.78979ZM11.25 16.4991H6.75V13.5468C6.75 12.9497 6.98705 12.3771 7.40901 11.9549C7.83097 11.5327 8.40326 11.2955 9 11.2955C9.59674 11.2955 10.169 11.5327 10.591 11.9549C11.0129 12.3771 11.25 12.9497 11.25 13.5468V16.4991ZM16.5 15.7487C16.5 15.9477 16.421 16.1386 16.2803 16.2793C16.1397 16.42 15.9489 16.4991 15.75 16.4991H12.75V13.5468C12.75 12.5517 12.3549 11.5973 11.6516 10.8936C10.9484 10.1899 9.99456 9.79459 9 9.79459C8.00544 9.79459 7.05161 10.1899 6.34835 10.8936C5.64509 11.5973 5.25 12.5517 5.25 13.5468V16.4991H2.25001C2.05109 16.4991 1.86033 16.42 1.71968 16.2793C1.57903 16.1386 1.50001 15.9477 1.50001 15.7487V8.38149C1.5007 8.1826 1.57965 7.992 1.71976 7.85092L7.4085 2.16026C7.83128 1.73921 8.4035 1.50283 9 1.50283C9.5965 1.50283 10.1687 1.73921 10.5915 2.16026L16.2802 7.85317C16.4198 7.99369 16.4987 8.18339 16.5 8.38149V15.7487Z" fill="#585858"/>
+                    </svg>
+
+                </div>
+                <div>Главная</div>
+            </div>
+            <div>
+                <div class="img-container">
+                    <img src="src/images/icons/update-icon.svg" alt="update">
+                </div>
+                <div>Обновить</div>
+            </div>
+            <div>
+                <div>
+                    <svg width="26" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 9C11.2089 9 10.4355 9.2346 9.77772 9.67412C9.11992 10.1136 8.60723 10.7384 8.30448 11.4693C8.00173 12.2002 7.92252 13.0044 8.07686 13.7804C8.2312 14.5563 8.61216 15.269 9.17157 15.8284C9.73098 16.3878 10.4437 16.7688 11.2196 16.9231C11.9956 17.0775 12.7998 16.9983 13.5307 16.6955C14.2616 16.3928 14.8864 15.8801 15.3259 15.2223C15.7654 14.5645 16 13.7911 16 13C16 11.9391 15.5786 10.9217 14.8284 10.1716C14.0783 9.42143 13.0609 9 12 9ZM12 15C11.6044 15 11.2178 14.8827 10.8889 14.6629C10.56 14.4432 10.3036 14.1308 10.1522 13.7654C10.0009 13.3999 9.96126 12.9978 10.0384 12.6098C10.1156 12.2219 10.3061 11.8655 10.5858 11.5858C10.8655 11.3061 11.2219 11.1156 11.6098 11.0384C11.9978 10.9613 12.3999 11.0009 12.7654 11.1522C13.1308 11.3036 13.4432 11.56 13.6629 11.8889C13.8827 12.2178 14 12.6044 14 13C14 13.5304 13.7893 14.0391 13.4142 14.4142C13.0391 14.7893 12.5304 15 12 15Z" fill="#585858"/>
+                        <path d="M22.3298 15.0583L21.8364 14.781C22.0585 13.6028 22.0585 12.395 21.8364 11.2168L22.3298 10.9395C22.7093 10.7261 23.042 10.4419 23.3088 10.1032C23.5756 9.76453 23.7714 9.37792 23.8849 8.96547C23.9985 8.55302 24.0275 8.12282 23.9705 7.69942C23.9134 7.27602 23.7714 6.86772 23.5524 6.49783C23.3335 6.12794 23.042 5.80371 22.6945 5.54364C22.347 5.28357 21.9503 5.09276 21.5272 4.9821C21.104 4.87144 20.6627 4.84311 20.2283 4.89871C19.7939 4.95432 19.375 5.09277 18.9955 5.30617L18.5009 5.58458C17.5668 4.80666 16.4932 4.2036 15.3344 3.80575V3.25C15.3344 2.38805 14.9831 1.5614 14.3577 0.951903C13.7324 0.34241 12.8843 0 12 0C11.1157 0 10.2676 0.34241 9.64225 0.951903C9.01694 1.5614 8.66564 2.38805 8.66564 3.25V3.80575C7.50682 4.20503 6.43367 4.80957 5.50022 5.58892L5.0034 5.30833C4.23698 4.87736 3.32631 4.76079 2.47171 4.98427C1.61712 5.20775 0.888605 5.75297 0.446442 6.5C0.00427808 7.24703 -0.115318 8.13466 0.113964 8.96764C0.343246 9.80061 0.902623 10.5107 1.66904 10.9417L2.16253 11.219C1.94036 12.3972 1.94036 13.605 2.16253 14.7832L1.66904 15.0605C0.902623 15.4915 0.343246 16.2016 0.113964 17.0345C-0.115318 17.8675 0.00427808 18.7551 0.446442 19.5022C0.888605 20.2492 1.61712 20.7944 2.47171 21.0179C3.32631 21.2414 4.23698 21.1248 5.0034 20.6938L5.498 20.4154C6.43247 21.1935 7.50637 21.7965 8.66564 22.1943V22.75C8.66564 23.612 9.01694 24.4386 9.64225 25.0481C10.2676 25.6576 11.1157 26 12 26C12.8843 26 13.7324 25.6576 14.3577 25.0481C14.9831 24.4386 15.3344 23.612 15.3344 22.75V22.1943C16.4932 21.795 17.5663 21.1904 18.4998 20.4111L18.9966 20.6906C19.763 21.1216 20.6737 21.2381 21.5283 21.0147C22.3829 20.7912 23.1114 20.2459 23.5536 19.4989C23.9957 18.7519 24.1153 17.8643 23.886 17.0313C23.6568 16.1983 23.0974 15.4882 22.331 15.0573L22.3298 15.0583ZM19.4979 10.9677C19.8743 12.297 19.8743 13.7008 19.4979 15.0302C19.4321 15.2615 19.4471 15.5076 19.5405 15.7298C19.6338 15.952 19.8002 16.1376 20.0136 16.2576L21.2184 16.9358C21.4738 17.0794 21.6602 17.3161 21.7366 17.5937C21.813 17.8713 21.7731 18.1672 21.6257 18.4161C21.4784 18.6651 21.2355 18.8468 20.9507 18.9212C20.6659 18.9957 20.3624 18.9568 20.1069 18.8132L18.8999 18.1328C18.6864 18.0123 18.4378 17.9644 18.1933 17.9968C17.9488 18.0292 17.7223 18.1399 17.5495 18.3116C16.5602 19.296 15.3139 19.9983 13.945 20.3428C13.7061 20.4027 13.4944 20.5384 13.3433 20.7284C13.1922 20.9185 13.1102 21.1521 13.1103 21.3926V22.75C13.1103 23.0373 12.9932 23.3129 12.7848 23.516C12.5764 23.7192 12.2937 23.8333 11.9989 23.8333C11.7041 23.8333 11.4214 23.7192 11.213 23.516C11.0045 23.3129 10.8874 23.0373 10.8874 22.75V21.3937C10.8876 21.1532 10.8056 20.9196 10.6545 20.7295C10.5034 20.5394 10.2917 20.4038 10.0527 20.3439C8.68381 19.998 7.43785 19.2941 6.4494 18.3083C6.2766 18.1367 6.0501 18.0259 5.8056 17.9936C5.5611 17.9612 5.3125 18.009 5.09899 18.1296L3.89417 18.8088C3.76772 18.8811 3.62785 18.9283 3.48263 18.9476C3.3374 18.967 3.18968 18.9581 3.04797 18.9216C2.90626 18.8851 2.77336 18.8216 2.65692 18.7348C2.54049 18.648 2.44281 18.5397 2.36952 18.4159C2.29623 18.2922 2.24877 18.1556 2.22988 18.0139C2.21098 17.8722 2.22103 17.7283 2.25943 17.5904C2.29784 17.4525 2.36384 17.3234 2.45365 17.2105C2.54346 17.0976 2.65529 17.0031 2.78272 16.9325L3.98753 16.2543C4.20087 16.1344 4.36729 15.9487 4.46063 15.7265C4.55398 15.5044 4.56897 15.2583 4.50325 15.0269C4.12686 13.6976 4.12686 12.2937 4.50325 10.9644C4.56778 10.7335 4.55208 10.4883 4.45858 10.2671C4.36509 10.0458 4.19906 9.86094 3.98642 9.74133L2.78161 9.06317C2.52618 8.91951 2.33977 8.68283 2.26338 8.40521C2.18699 8.12759 2.22687 7.83175 2.37426 7.58279C2.52165 7.33383 2.76446 7.15213 3.04929 7.07768C3.33412 7.00322 3.63764 7.04209 3.89306 7.18575L5.1001 7.86608C5.31303 7.98689 5.56111 8.03531 5.80535 8.00374C6.04958 7.97217 6.27614 7.86239 6.4494 7.69167C7.43869 6.70729 8.68501 6.00494 10.0538 5.66042C10.2935 5.60036 10.5058 5.46407 10.657 5.27313C10.8082 5.08219 10.8897 4.84753 10.8885 4.60633V3.25C10.8885 2.96268 11.0056 2.68713 11.2141 2.48397C11.4225 2.2808 11.7052 2.16667 12 2.16667C12.2948 2.16667 12.5775 2.2808 12.7859 2.48397C12.9944 2.68713 13.1115 2.96268 13.1115 3.25V4.60633C13.1113 4.84679 13.1933 5.08045 13.3444 5.2705C13.4955 5.46056 13.7072 5.59621 13.9462 5.65608C15.3155 6.00183 16.5618 6.70571 17.5506 7.69167C17.7234 7.86334 17.9499 7.97408 18.1944 8.00645C18.4389 8.03881 18.6875 7.99095 18.901 7.87042L20.1058 7.19117C20.2323 7.11891 20.3721 7.07175 20.5174 7.05239C20.6626 7.03304 20.8103 7.04188 20.952 7.07839C21.0937 7.11491 21.2266 7.17839 21.3431 7.26517C21.4595 7.35196 21.5572 7.46033 21.6305 7.58406C21.7038 7.70779 21.7512 7.84443 21.7701 7.9861C21.789 8.12778 21.779 8.2717 21.7406 8.40958C21.7022 8.54746 21.6362 8.67657 21.5463 8.78949C21.4565 8.9024 21.3447 8.99689 21.2173 9.0675L20.0125 9.74567C19.8002 9.8656 19.6347 10.0506 19.5416 10.2718C19.4485 10.4931 19.4331 10.7381 19.4979 10.9688V10.9677Z" fill="#585858"/>
+                    </svg>
+                </div>
+                <div>Настройки</div>
+            </div>
+        </nav>
     </div>
 
-    <div class="main flex-grow-1 d-block d-lg-none">
+    <!-- <div class="main flex-grow-1 d-block d-lg-none">
         <div id="mobile-header">
             <div class="search-bar d-flex justify-content-between">
                 <img src="src/images/icons/burger-icon.svg" alt="menu" id="menu-trigger" style="cursor: pointer;">
@@ -782,7 +716,7 @@
                 <div>Настройки</div>
             </div>
         </nav>
-    </div>
+    </div> -->
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>

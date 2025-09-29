@@ -1,18 +1,18 @@
 @font-face {
   font-family: "NeueMontreal";
-  src: url("../src/fonts/NeueMontreal/ppneuemontreal-book.otf") format("opentype");
+  src: url("src/fonts/NeueMontreal/ppneuemontreal-book.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "NeueMontreal";
-  src: url("../src/fonts/NeueMontreal/ppneuemontreal-bold.otf") format("opentype");
+  src: url("src/fonts/NeueMontreal/ppneuemontreal-bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "NeueMontreal";
-  src: url("../src/fonts/NeueMontreal/ppneuemontreal-medium.otf") format("opentype");
+  src: url("src/fonts/NeueMontreal/ppneuemontreal-medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
@@ -61,7 +61,7 @@ li {
 }
 
 .fs-12px {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .fs-14px {
@@ -135,10 +135,6 @@ li {
   color: #5A4DF5;
 }
 
-.text-secondary-emphasis {
-  color: #7F7F7F !important;
-}
-
 .red-dot {
   position: absolute;
   bottom: 0;
@@ -196,18 +192,6 @@ header #online-icon {
   position: absolute;
   bottom: 0;
   right: 0;
-}
-
-button.btn {
-  border-radius: 12px;
-}
-
-button.btn-danger {
-  background-color: #F95F5F;
-}
-
-button.btn-success {
-  background-color: #03A740;
 }
 
 .welcome-page {
@@ -542,9 +526,6 @@ button.btn-success {
   padding-left: 20px;
   word-wrap: break-word;
 }
-.main .contracts .sorting .contracts-table-row.table-row-users {
-  grid-template-columns: auto 50px 160px 2fr 3fr 120px 4fr 190px 180px;
-}
 .main .contracts .sorting .contracts-table-row > div {
   padding-right: 10px;
   /* Ensure all divs have consistent behavior */
@@ -664,125 +645,6 @@ button.btn-success {
   box-shadow: 0px 0px 2px 4px rgba(241, 184, 22, 0.2);
 }
 
-.modal-backdrop-custom {
-  position: fixed;
-  font-size: 15px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1040;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.modal-backdrop-custom h2 {
-  font-weight: 700;
-  font-size: 27px;
-}
-.modal-backdrop-custom p {
-  font-size: 15px;
-  color: #585858;
-}
-.modal-backdrop-custom .modal-dialog-custom {
-  background: white;
-  border-radius: 24px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-.modal-backdrop-custom .modal-header-custom {
-  padding: 0 50px;
-  padding-top: 109px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.modal-backdrop-custom .back-btn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: #666;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-.modal-backdrop-custom .modal-body-custom {
-  padding: 50px;
-  padding-top: 20px;
-}
-.modal-backdrop-custom .form-label-custom {
-  color: #585858;
-  margin-bottom: 8px;
-  display: block;
-}
-.modal-backdrop-custom .form-control-custom {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #585858;
-  border-radius: 9px;
-  color: #585858;
-  font-size: 16px;
-  margin-bottom: 16px;
-}
-.modal-backdrop-custom .form-control-custom:focus {
-  outline: none;
-  border-color: #0d6efd;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-}
-.modal-backdrop-custom .help-text {
-  font-size: 12px;
-  color: #6c757d;
-  margin-bottom: 16px;
-}
-.modal-backdrop-custom .toggle-buttons {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-.modal-backdrop-custom .toggle-btn {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ced4da;
-  border-radius: 9px;
-  background: white;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  color: #6C6C6C;
-  transition: all 0.2s;
-}
-.modal-backdrop-custom .toggle-btn.active-yes {
-  background-color: #03A740;
-  color: white;
-  border-color: #03A740;
-}
-.modal-backdrop-custom .toggle-btn.active-no {
-  background-color: #F95F5F;
-  color: white;
-  border-color: #F95F5F;
-}
-.modal-backdrop-custom .toggle-btn:hover:not(.active-yes):not(.active-no) {
-  background-color: #f8f9fa;
-}
-.modal-backdrop-custom .submit-btn {
-  width: 100%;
-  padding: 12px;
-  background-color: #088CFA;
-  color: white;
-  border: none;
-  border-radius: 9px;
-  font-size: 17px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-.modal-backdrop-custom .submit-btn:hover {
-  background-color: #0b5ed7;
-}
-
 .settings .content {
   padding: 65px 10px 0px 10px;
   height: 100%;
@@ -899,150 +761,9 @@ button.btn-success {
 .settings .content .company-card h6 {
   margin-bottom: 5px;
 }
-.settings .content .company-card .company-header {
-  gap: 26px;
-}
 .settings .content .company-card .company-header .fs-16px {
   color: #585858;
   font-weight: 500;
-}
-.settings .content .company-card .company-header img {
-  height: 21px;
-}
-.settings .content .company-card .company-header .avatar img:first-of-type {
-  width: 116px;
-  height: auto;
-  object-fit: contain;
-}
-.settings .content .company-card .section {
-  font-size: 14px;
-  font-weight: 500;
-  color: #000000;
-}
-.settings .content .company-card .section tbody, .settings .content .company-card .section td, .settings .content .company-card .section tfoot, .settings .content .company-card .section th, .settings .content .company-card .section thead, .settings .content .company-card .section tr {
-  border: none;
-  outline: none;
-}
-.settings .content .company-card .section tr {
-  font-size: 12px;
-}
-.settings .content .company-card .section tr .text-muted {
-  color: #7F7F7F;
-}
-.settings .content .company-card .section tr .text-primary {
-  color: #2F81FF !important;
-}
-.settings .content.row {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-.settings .progress-steps {
-  font-size: 14px;
-}
-.settings .progress-steps > div:nth-of-type(2) {
-  display: flex;
-  align-items: center;
-}
-.settings .progress-steps > div:nth-of-type(2) > div {
-  position: relative;
-  padding-right: 41px;
-  font-size: 14px;
-  font-weight: 500;
-}
-.settings .progress-steps > div:nth-of-type(2) > div:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 1px;
-  background-color: black;
-}
-.settings .aside {
-  font-size: 14px;
-  font-weight: 500;
-  color: #585858;
-}
-.settings .aside .button-container {
-  height: 80px;
-}
-.settings .aside .button-container button {
-  height: 59px;
-  width: auto;
-}
-.settings .aside p {
-  margin: 0;
-}
-.settings .aside p.text-secondary-emphasis {
-  color: #7F7F7F !important;
-}
-.settings .aside .btn {
-  border-radius: 12px;
-  font-size: 14px;
-  width: 100%;
-  font-weight: 700;
-  color: #fff;
-  height: 46px;
-}
-.settings .aside .list .row {
-  background-color: #FDFDFD;
-  border-radius: 9px;
-  margin-bottom: 4px;
-  height: 68px;
-  position: relative;
-  overflow: hidden;
-  padding-left: 20px;
-  margin-left: 0;
-  margin-right: 0;
-}
-.settings .aside .list .row .placeholder {
-  background-color: rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
-}
-.settings .aside .list .row .text-secondary {
-  color: #B4B6B8 !important;
-}
-.settings .aside .list .row::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 10px;
-  height: 100%;
-  opacity: 50%;
-}
-.settings .aside .list .row .fw-bold {
-  border-left: 1px solid #585858;
-  padding-left: 20px;
-}
-.settings .aside .list .row.status-waiting .fw-bold {
-  color: #F1B816;
-}
-.settings .aside .list .row.status-waiting::before {
-  background-color: #F1B816;
-}
-.settings .aside .list .row.status-unsended .fw-bold {
-  color: #F15816;
-}
-.settings .aside .list .row.status-unsended::before {
-  background-color: #F15816;
-}
-.settings .aside .list .row.status-signed .fw-bold {
-  color: #2F81FF;
-}
-.settings .aside .list .row.status-signed::before {
-  background-color: #2F81FF;
-}
-.settings .aside .list .row.status-rejected .fw-bold {
-  color: #F95F5F;
-}
-.settings .aside .list .row.status-rejected::before {
-  background-color: #F95F5F;
-}
-.settings .dop-info {
-  padding: 45px 33px;
-  color: #000000;
 }
 
 @media (min-width: 1400px) {
@@ -1097,7 +818,6 @@ button.btn-success {
     padding: 5px 8px;
     padding-right: 22px;
     background-position: right 5px center;
-    border-radius: 5px;
   }
   .main .cards .card {
     padding: 10px 20px;
