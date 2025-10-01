@@ -53,7 +53,8 @@ main {
 }
 .logo img {
   height: 27px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 a {
@@ -86,6 +87,10 @@ li {
 
 .fs-24px {
   font-size: 24px;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
 }
 
 .btn-dark {
@@ -336,7 +341,7 @@ button.btn-success {
 .dropdown .dropdown-arrow {
   position: absolute;
   top: -11px;
-  left: 20px;
+  left: 200px;
   width: 30px;
   height: 12px;
   overflow: visible;
@@ -357,7 +362,6 @@ button.btn-success {
   flex: 1 0 auto;
   color: #fff;
   font-family: "NeueMontreal";
-  background-image: url("src/images/welcome-background.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -402,7 +406,8 @@ button.btn-success {
 .welcome-page .logo img {
   width: 74px;
   height: 27px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .welcome-page ul {
   gap: 44px;
@@ -640,6 +645,12 @@ button.btn-success {
   border: none;
   border-radius: 12px;
 }
+.main .contracts .input-group input::-moz-placeholder {
+  font-weight: 500;
+  color: #585858;
+  font-size: 16px;
+  font-family: "NeueMontreal";
+}
 .main .contracts .input-group input::placeholder {
   font-weight: 500;
   color: #585858;
@@ -671,7 +682,7 @@ button.btn-success {
 }
 .main .contracts .sorting .contracts-table-row {
   display: grid;
-  grid-template-columns: auto 90px 2fr 110px 3fr 4fr 4fr 190px 119px;
+  grid-template-columns: auto 90px 2fr 110px 3fr 4fr 4fr 190px 129px;
   align-items: center;
   padding-right: 20px;
   font-family: "NeueMontreal";
@@ -679,7 +690,7 @@ button.btn-success {
   word-wrap: break-word;
 }
 .main .contracts .sorting .contracts-table-row.table-row-users {
-  grid-template-columns: auto 50px 160px 2fr 3fr 120px 4fr 190px 180px;
+  grid-template-columns: auto 50px 160px 2fr 3fr 120px 4fr 190px 190px;
 }
 .main .contracts .sorting .contracts-table-row > div {
   padding-right: 10px;
@@ -761,6 +772,7 @@ button.btn-success {
   /* Style selects in header to fit the grid properly */
 }
 .main .contracts .sorting .contracts-table-header .contracts-table-row select {
+  width: -moz-min-content;
   width: min-content;
   /* Take full width of grid cell */
   background-color: #000000;
@@ -854,8 +866,6 @@ button.btn-success {
   color: #585858;
 }
 .main .contracts .sorting .contracts-table-body .contracts-table-row:hover {
-  -webkit-box-shadow: 0px 0px 2px 4px rgba(241, 184, 22, 0.2);
-  -moz-box-shadow: 0px 0px 2px 4px rgba(241, 184, 22, 0.2);
   box-shadow: 0px 0px 2px 4px rgba(241, 184, 22, 0.2);
 }
 
@@ -1068,8 +1078,6 @@ button.btn-success {
   align-content: flex-start;
   /* Rounds the top-left corner */
   border-top-right-radius: 12px;
-  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .settings .content > .row {
@@ -1082,8 +1090,6 @@ button.btn-success {
   position: relative;
 }
 .settings .content .tab-content {
-  -webkit-box-shadow: 0px 4px 4px 0px rgba(34, 60, 80, 0.25);
-  -moz-box-shadow: 0px 4px 4px 0px rgba(34, 60, 80, 0.25);
   box-shadow: 0px 4px 4px 0px rgba(34, 60, 80, 0.25);
   border-top-right-radius: 12px;
   height: calc(100% - 34px);
@@ -1100,8 +1106,6 @@ button.btn-success {
 .settings .content .nav-tabs button.active {
   background-color: #FDFDFD;
   color: #585858;
-  -webkit-box-shadow: 0px 4px 4px 0px rgba(34, 60, 80, 0.25);
-  -moz-box-shadow: 0px 4px 4px 0px rgba(34, 60, 80, 0.25);
   box-shadow: 0px 4px 4px 0px rgba(34, 60, 80, 0.25);
 }
 .settings .content .tab-content {
@@ -1135,7 +1139,8 @@ button.btn-success {
 .settings .content .profile-card .profile-header .avatar img:first-of-type {
   width: 116px;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .settings .content .form-group {
   margin-bottom: 15px;
@@ -1197,7 +1202,8 @@ button.btn-success {
 .settings .content .company-card .company-header .avatar img:first-of-type {
   width: 116px;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .settings .content .company-card .section {
   font-size: 14px;
@@ -1265,8 +1271,6 @@ button.btn-success {
   background-color: #FFFFFF;
   color: #2F81FF;
   width: 100%;
-  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   height: 46px;
 }
@@ -1275,8 +1279,6 @@ button.btn-success {
   background-color: #2F81FF;
   color: #FFFFFF;
   width: 100%;
-  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .settings .aside p {
@@ -1402,11 +1404,14 @@ button.btn-success {
   .main .contracts select {
     font-size: 14px;
   }
+  .main .contracts .input-group input::-moz-placeholder {
+    font-size: 14px;
+  }
   .main .contracts .input-group input::placeholder {
     font-size: 14px;
   }
   .main .contracts .sorting .contracts-table-row {
-    grid-template-columns: auto 70px 2fr 90px 90px 4fr 4fr 150px 97px;
+    grid-template-columns: auto 70px 85px 90px 90px 140px 1fr 150px 107px;
   }
   .main .contracts .sorting .contracts-table-header .contracts-table-row select {
     padding: 5px 8px;
@@ -1425,6 +1430,9 @@ button.btn-success {
   }
 }
 @media (max-width: 1199px) {
+  .dropdown button.btn-dark.custom-btn {
+    font-size: 12px;
+  }
   .welcome-page h1 {
     font-size: 80px;
     max-width: 800px;
@@ -1438,7 +1446,8 @@ button.btn-success {
   }
   body > header .logo img {
     width: 80px;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     font-size: 50px;
   }
   body > header .fs-16px {
@@ -1466,6 +1475,12 @@ button.btn-success {
   }
   .main main {
     padding-right: 10px;
+  }
+  .main .contracts {
+    font-size: 12px;
+  }
+  .main .contracts .sorting .contracts-table-row {
+    grid-template-columns: auto 70px 72px 85px 75px 122px 1fr 141px 93px;
   }
   .main aside {
     width: 60px;
@@ -1714,7 +1729,8 @@ button.btn-success {
   }
   .main main .mobile-contracts > div .img-container img {
     width: 19px;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .main main .mobile-contracts > div::before {
     content: "";

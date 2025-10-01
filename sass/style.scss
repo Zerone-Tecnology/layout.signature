@@ -104,6 +104,9 @@ li {
     font-size: 24px;
 }
 
+.rotate-180 {
+  transform: rotate(180deg);
+}
 
 .btn-dark {
     background-color: $black;
@@ -401,7 +404,7 @@ button.btn-success {
     .dropdown-arrow {
         position: absolute;
         top: -11px;
-        left: 20px;
+        left: 200px;
         width: 30px;
         height: 12px;
         overflow: visible;
@@ -427,7 +430,6 @@ button.btn-success {
     flex: 1 0 auto;
     color: $white;
     font-family: 'NeueMontreal';
-    background-image: url('src/images/welcome-background.gif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -813,7 +815,7 @@ button.btn-success {
 
             .contracts-table-row {
                 display: grid;
-                grid-template-columns: auto 90px 2fr 110px 3fr 4fr 4fr 190px 119px;
+                grid-template-columns: auto 90px 2fr 110px 3fr 4fr 4fr 190px 129px;
                 align-items: center;
                 padding-right: 20px;
                 font-family: 'NeueMontreal';
@@ -821,7 +823,7 @@ button.btn-success {
                 word-wrap: break-word;
 
                 &.table-row-users {
-                    grid-template-columns: auto 50px 160px 2fr 3fr 120px 4fr 190px 180px;
+                    grid-template-columns: auto 50px 160px 2fr 3fr 120px 4fr 190px 190px;
                 }
 
                 &>div {
@@ -1771,7 +1773,7 @@ button.btn-success {
 
             .sorting {
                 .contracts-table-row {
-                    grid-template-columns: auto 70px 2fr 90px 90px 4fr 4fr 150px 97px;
+                    grid-template-columns: auto 70px 85px 90px 90px 140px 1fr 150px 107px;
                 }
 
                 .contracts-table-header .contracts-table-row {
@@ -1800,6 +1802,12 @@ button.btn-success {
 }
 
 @media (max-width: 1199px) {
+    
+
+    .dropdown button.btn-dark.custom-btn {
+        font-size: 12px;
+    }
+
     .welcome-page h1 {
         font-size: 80px;
         max-width: 800px;
@@ -1851,6 +1859,14 @@ button.btn-success {
 
         main {
             padding-right: 10px;
+        }
+
+        .contracts {
+            font-size: 12px;
+
+            .sorting .contracts-table-row {
+                grid-template-columns: auto 70px 72px 85px 75px 122px 1fr 141px 93px;
+            }
         }
 
         aside {
