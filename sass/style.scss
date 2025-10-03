@@ -57,7 +57,7 @@ $gray-color: #585858;
 html,
 body {
     // overflow-y: hidden;
-    min-height: 100%;
+    min-height: 100vh;
     margin: 0;
     font-family: 'NeueMontreal';
     display: flex;
@@ -921,7 +921,7 @@ button.btn-success {
     padding-left: 20px;
     // min-height: calc(100% - 117px);
     height: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
 
     .cards {
         margin-bottom: 24px;
@@ -1086,6 +1086,7 @@ button.btn-success {
         }
 
         .sorting {
+            height: 100%;
             .contracts-table-wrapper {
                 overflow-y: auto;
                 border: 1px solid #ccc;
@@ -1232,7 +1233,8 @@ button.btn-success {
 
             /* Body rows styling */
             .contracts-table-body {
-
+                height: 100%;
+                // overflow-y: scroll;
                 padding-top: 4px;
                 padding-left: 10px;
                 padding-right: 10px;

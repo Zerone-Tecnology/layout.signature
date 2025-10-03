@@ -34,7 +34,7 @@
 
 html,
 body {
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0;
   font-family: "NeueMontreal";
   display: flex;
@@ -748,7 +748,6 @@ button.btn-success {
 .main {
   padding-left: 20px;
   height: 100%;
-  min-height: 100vh;
 }
 .main .cards {
   margin-bottom: 24px;
@@ -886,6 +885,7 @@ button.btn-success {
   box-shadow: none;
 }
 .main .contracts .sorting {
+  height: 100%;
   /* Header-specific styling */
   /* Body rows styling */
 }
@@ -1007,6 +1007,7 @@ button.btn-success {
   border-radius: 12px;
 }
 .main .contracts .sorting .contracts-table-body {
+  height: 100%;
   padding-top: 4px;
   padding-left: 10px;
   padding-right: 10px;
